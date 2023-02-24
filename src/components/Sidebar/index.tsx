@@ -1,11 +1,47 @@
-import "./sidebar.scss";
+import { useEffect, useState } from "react";
 import { MdSortByAlpha } from "react-icons/md";
+import Card from "./Card";
+import "./sidebar.scss";
 
 export default function Sidebar({
   sidebarIsVisible,
+  websites,
 }: {
   sidebarIsVisible: boolean;
+  websites: any[];
 }) {
+  const [filter, setFilter] = useState<string>("");
+  const [category, setCategory] = useState<string>("geral");
+  const [ascendentOrder, setAscendentOrder] = useState<boolean>(true);
+
+  useEffect(() => {
+    orderWebsites;
+  }, [ascendentOrder]);
+
+  const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(() => event.target.value);
+  };
+
+  const handleClearFilter = () => {
+    setFilter(() => "");
+  };
+
+  const handleCategories = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setCategory(event.target.value);
+  };
+
+  const handleOrder = () => {
+    setAscendentOrder((order) => !order);
+    console.log(ascendentOrder);
+  };
+
+  const orderWebsites = (websitesList: any[]) => {
+    if (ascendentOrder)
+      return websitesList.sort((a, b) => (a.name > b.name ? 1 : -1));
+    else
+      return websitesList.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  };
+
   return (
     <>
       <aside
@@ -18,13 +54,23 @@ export default function Sidebar({
             type="text"
             className="filters-container__term"
             placeholder="Filtrar buscadores"
+            onChange={handleFilter}
+            value={filter}
           />
-          <i className="filters-container__term-cleaner disappear"></i>
+          <i
+            className={
+              filter
+                ? "filters-container__term-cleaner"
+                : "filters-container__term-cleaner disappear"
+            }
+            onClick={handleClearFilter}
+          ></i>
           <select
             className="filters-container__categories"
             name="filter-categories"
             id="filter-categories"
             defaultValue={"geral"}
+            onChange={handleCategories}
           >
             <option value="geral">Geral</option>
             <option value="buscadores">Buscadores</option>
@@ -48,7 +94,7 @@ export default function Sidebar({
             {/* <!-- <option value="adultos">Adultos</option> --> */}
             <option value="outros">Outros</option>
           </select>
-          <span className="filters-container__alphabetic">
+          <span className="filters-container__alphabetic" onClick={handleOrder}>
             <MdSortByAlpha size={25} color="#7292a9" />
           </span>
         </div>
@@ -69,7 +115,17 @@ export default function Sidebar({
 
         <div className="card-group">
           <h2 className="card-group__title">Todos</h2>
-          <div>{/* AQUI DEVEM FICAR TODOS OS CARDS DOS BUSCADORES */}</div>
+          <div>
+            {orderWebsites(websites)
+              .filter(
+                (website) =>
+                  website.name.toLowerCase().includes(filter) &&
+                  website.categories.indexOf(category) !== -1
+              )
+              .map((website, i) => (
+                <Card key={i} website={website}></Card>
+              ))}
+          </div>
         </div>
       </aside>
     </>

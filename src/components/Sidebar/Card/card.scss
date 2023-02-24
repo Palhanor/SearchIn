@@ -1,0 +1,40 @@
+@import "../../../styles/presets.scss";
+
+.card {
+  &__checkbox {
+    display: none;
+
+    &:checked + .card__label {
+      border: 2px solid $logo-light;
+      box-shadow: 0 0 3px $logo-light;
+    }
+  }
+
+  &__label {
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    box-shadow: 0px 0px 5px rgba($logo-light, 0.3);
+    cursor: pointer;
+    display: block;
+    height: 4rem;
+    margin: 0.8rem auto;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+
+    @include xlg-mob {
+      height: 5rem;
+    }
+
+    &:hover {
+      box-shadow: none;
+      border: 1px solid rgba($logo-light, 0.6);
+    }
+  }
+}
