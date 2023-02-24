@@ -1,0 +1,185 @@
+@import "../../styles/presets.scss";
+
+.search {
+  width: 100%;
+
+  .menu-icon {
+    align-items: center;
+    background-image: url("../../assets/icons/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    height: 2.5rem;
+    margin: 1.5rem;
+    transition: 0.3s ease-in-out;
+    width: 2.5rem;
+
+    @include xlg-mob {
+      height: 3rem;
+      margin: 1.5rem 3rem;
+      width: 3rem;
+    }
+
+    &:hover {
+      background-image: url("../../assets/icons/icon-menu-hover.svg");
+    }
+  }
+
+  .gloopex-logo {
+    clear: both;
+    display: block;
+    font-size: 3rem;
+    margin: 25vh auto 1rem;
+    text-align: center;
+    width: 65%;
+
+    @include xlg-mob {
+      margin: 20vh auto 1rem;
+      width: 45%;
+    }
+
+    @include md-desk {
+      width: 40%;
+    }
+  }
+
+  .gloopex-slogan {
+    color: $dark-gray;
+    display: block;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include xlg-mob {
+      font-size: 1.5rem;
+    }
+  }
+
+  .query {
+    display: flex;
+    margin: 1rem auto;
+    width: 80%;
+
+    @include md-mob {
+      margin: 1rem auto 10rem;
+    }
+
+    @include xlg-mob {
+      margin: 1rem auto;
+      width: 70%;
+    }
+
+    &__input {
+      background-color: $white;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid $light-gray;
+      box-sizing: border-box;
+      cursor: text;
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      padding: 0.9rem;
+      transition: 0.3s ease-in-out;
+      width: 80%;
+
+      @include lg-mob {
+        width: 90%;
+      }
+
+      @include xlg-mob {
+        font-size: 1.1rem;
+        padding: 1.2rem;
+      }
+
+      @include lg-desk {
+        width: 92%;
+      }
+
+      &::selection {
+        background-color: $logo-dark;
+        color: white;
+      }
+
+      &:hover {
+        box-shadow: 0 3px 10px rgba($light-gray, 0.25);
+      }
+
+      &:hover + .query__button {
+        box-shadow: 0 3px 10px rgba($light-gray, 0.25);
+      }
+    }
+
+    &__button {
+      border-radius: 0 5px 5px 0;
+      border: 1px solid $blue-gray;
+      box-sizing: border-box;
+      background-color: $blue-gray;
+      background-image: url("../../assets/icons/icon-search-hover.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      width: 20%;
+
+      @include lg-mob {
+        width: 10%;
+      }
+
+      @include xlg-mob {
+        border: 1px solid $light-gray;
+        border-left: none;
+        background-color: $white;
+        background-image: url("../../assets/icons/icon-search.svg");
+
+        &:hover {
+          background-color: $blue-gray;
+          border: 1px solid $blue-gray;
+          background-image: url("../../assets/icons/icon-search-hover.svg");
+        }
+      }
+
+      @include lg-desk {
+        width: 8%;
+      }
+    }
+  }
+
+  .infinity-mobile {
+    bottom: 4rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/icons/icon-gloopex-flat.svg");
+    height: 3.3rem;
+    position: fixed;
+    right: 1.5rem;
+    width: 3.3rem;
+
+    @include xlg-mob {
+      display: none;
+    }
+  }
+
+  .infinity-mobile--close {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/icons/icon-close.svg");
+    height: 2.5rem;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+    width: 2.5rem;
+    z-index: 1;
+
+    @include xlg-mob {
+      display: none;
+    }
+  }
+}

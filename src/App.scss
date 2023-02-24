@@ -1,0 +1,47 @@
+@import "styles/presets";
+
+.modal-background {
+  background-color: rgba($black, 0.4);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  @include xlg-mob {
+    z-index: 2;
+  }
+}
+
+.appear {
+  display: block;
+}
+
+.disappear {
+  display: none;
+}
+
+.close-sidebar {
+  margin-left: -75vw;
+
+  @include md-mob {
+    margin-left: -60vw;
+  }
+
+  @include lg-mob {
+    margin-left: -50vw;
+  }
+
+  @include xlg-mob {
+    margin-left: -38.5vw;
+  }
+
+  @include md-desk {
+    margin-left: -29vw;
+  }
+}
+
+.open-sidebar {
+  margin-left: 0;
+}

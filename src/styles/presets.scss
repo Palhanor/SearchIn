@@ -1,0 +1,69 @@
+// TEMA
+$black: #000000;
+$blue-gray: #7292a9;
+$dark-gray: #5b5b5b;
+$light-gray: #c4c4c4;
+$logo-dark: #365461;
+$logo-light: #98b8d6;
+$medium-gray: #8d8d8d;
+$navigation-bg: #e8eff4;
+$sidebar-bg: #f8fbfc;
+$white: #ffffff;
+
+// RESPONSIIVIDADE
+$sm-mob: 360px;
+$md-mob: 640px;
+$lg-mob: 768px;
+$xlg-mob: 1024px;
+$sm-desk: 1280px;
+$md-desk: 1440px;
+$lg-desk: 1920px;
+$xlg-desk: 2560px;
+
+@mixin sm-mob {
+  @media (min-width: $sm-mob) {
+    @content;
+  }
+}
+
+@mixin md-mob {
+  @media (min-width: $md-mob) {
+    @content;
+  }
+}
+
+@mixin lg-mob {
+  @media (min-width: $lg-mob) {
+    @content;
+  }
+}
+
+@mixin xlg-mob {
+  @media (min-width: $xlg-mob) {
+    @content;
+  }
+}
+
+@mixin sm-desk {
+  @media (min-width: $sm-desk) {
+    @content;
+  }
+}
+
+@mixin md-desk {
+  @media (min-width: $md-desk) {
+    @content;
+  }
+}
+
+@mixin lg-desk {
+  @media (min-width: $lg-desk) {
+    @content;
+  }
+}
+
+@mixin xlg-desk {
+  @media (min-width: $xlg-desk) {
+    @content;
+  }
+}

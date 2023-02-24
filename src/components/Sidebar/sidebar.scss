@@ -1,0 +1,179 @@
+@import "../../styles/presets.scss";
+
+.sidebar {
+  box-sizing: border-box;
+  background-color: $navigation-bg;
+  height: 100vh;
+  margin-left: -75vw;
+  overflow-y: scroll;
+  padding-bottom: 2rem;
+  position: fixed;
+  padding: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba($logo-light, 0.3) rgba($logo-light, 0.15);
+  transition: 0.5s ease-in-out;
+  width: 75vw;
+  z-index: 1;
+
+  @include md-mob {
+    margin-left: -60vw;
+    width: 60vw;
+  }
+
+  @include lg-mob {
+    margin-left: -50vw;
+    width: 50vw;
+  }
+
+  @include xlg-mob {
+    background-color: $sidebar-bg;
+    margin-left: 0;
+    position: static;
+    scrollbar-color: rgba($logo-light, 0.6) rgba($logo-light, 0.15);
+    width: 40vw;
+    z-index: 0;
+  }
+
+  @include md-desk {
+    width: 30vw;
+  }
+
+  .filters-container {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &__term {
+      background-color: darken($navigation-bg, 10%);
+      box-sizing: border-box;
+      border: none;
+      border-radius: 5px;
+      cursor: text;
+      color: $logo-dark;
+      display: block;
+      font-family: inherit;
+      outline: none;
+      padding: 1.3rem 3rem 1.3rem 1rem;
+      width: 100%;
+
+      @include xlg-mob {
+        background-color: $navigation-bg;
+        color: $logo-dark;
+      }
+
+      &::selection {
+        background-color: $logo-dark;
+        color: white;
+      }
+    }
+
+    &__term-cleaner {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../image/icons/icon-close-clean.svg");
+      cursor: pointer;
+      height: 1rem;
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+      width: 1rem;
+    }
+
+    &__categories {
+      border: 1px solid darken($navigation-bg, 10%);
+      border-radius: 5px;
+      background-color: darken($navigation-bg, 10%);
+      color: $logo-dark;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      scrollbar-width: none;
+
+      @include xlg-mob {
+        background-color: $navigation-bg;
+        color: $logo-dark;
+        cursor: pointer;
+      }
+    }
+
+    &__alphabetic {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+      width: 2rem;
+      padding-top: 5px;
+    }
+  }
+
+  .card-group {
+    margin-bottom: 2rem;
+
+    &__title {
+      color: $medium-gray;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0 0 0.8rem;
+
+      @include xlg-mob {
+        font-size: 1.1rem;
+      }
+    }
+
+    // &__placeholder {
+    //     color: $medium-gray;
+    //     display: block;
+    //     font-style: italic;
+    //     font-size: .8rem;
+    //     margin: 1.5rem;
+    //     text-align: center;
+
+    //     @include xlg-mob {
+    //         font-size: 1rem;
+    //     }
+    // }
+  }
+
+  .card {
+    &__checkbox {
+      display: none;
+
+      &:checked + .card__label {
+        border: 2px solid $logo-light;
+        box-shadow: 0 0 3px $logo-light;
+      }
+    }
+
+    &__label {
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: center;
+      background-position-y: center;
+      border: none;
+      box-shadow: 0px 0px 5px rgba($logo-light, 0.3);
+      cursor: pointer;
+      display: block;
+      height: 4rem;
+      margin: 0.8rem auto;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+
+      @include xlg-mob {
+        height: 5rem;
+      }
+
+      &:hover {
+        box-shadow: none;
+        border: 1px solid rgba($logo-light, 0.6);
+      }
+    }
+  }
+}

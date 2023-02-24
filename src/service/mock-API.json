@@ -1,0 +1,804 @@
+{
+  "websites": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com.br",
+      "search": "https://www.google.com.br/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "Youtube",
+      "url": "https://www.youtube.com",
+      "search": "https://www.youtube.com/results?search_query=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": "+"
+    },
+    {
+      "name": "Duckduckgo",
+      "url": "https://www.duckduckgo.com",
+      "search": "https://www.duckduckgo.com/?q=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "Ecosia",
+      "url": "https://www.ecosia.org",
+      "search": "https://www.ecosia.org/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.com.br/",
+      "search": "https://www.amazon.com.br/s?k=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "+"
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://pt.wikipedia.org",
+      "search": "https://pt.wikipedia.org/wiki/Especial:Pesquisar/",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "_"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://www.twitter.com",
+      "search": "https://twitter.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "midiasSociais", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Reddit",
+      "url": "https://www.reddit.com",
+      "search": "https://www.reddit.com/search/?q=",
+      "lastValue": "",
+      "categories": ["geral", "midiasSociais", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Spotify",
+      "url": "https://www.spotify.com/br/",
+      "search": "https://open.spotify.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "musicas", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://br.linkedin.com/",
+      "search": "https://www.linkedin.com/search/results/all/?keywords=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": " "
+    },
+    {
+      "name": "Facebook",
+      "url": "https://pt-br.facebook.com/",
+      "search": "https://www.facebook.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "midiasSociais", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Github",
+      "url": "https://www.github.com",
+      "search": "https://github.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://br.pinterest.com/",
+      "search": "https://br.pinterest.com/search/pins/?q=",
+      "lastValue": "",
+      "categories": ["geral", "imagens"],
+      "concat": " "
+    },
+    {
+      "name": "Aliexpress",
+      "url": "https://pt.aliexpress.com/",
+      "search": "https://pt.aliexpress.com/wholesale?SearchText=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "+"
+    },
+    {
+      "name": "Yahoo",
+      "url": "https://br.yahoo.com/",
+      "search": "https://br.search.yahoo.com/search?p=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "Udemy",
+      "url": "https://www.udemy.com/pt/",
+      "search": "https://www.udemy.com/courses/search/?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "Coursera",
+      "url": "https://pt.coursera.org/",
+      "search": "https://pt.coursera.org/search?query=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": " "
+    },
+    {
+      "name": "Giphy",
+      "url": "https://giphy.com",
+      "search": "https://giphy.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "imagens"],
+      "concat": "-"
+    },
+    {
+      "name": "Soundcloud",
+      "url": "https://soundcloud.com",
+      "search": "https://soundcloud.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "musicas"],
+      "concat": " "
+    },
+    {
+      "name": "Wikihow",
+      "url": "https://pt.wikihow.com/",
+      "search": "https://pt.wikihow.com/wikiHowTo?search=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": "+"
+    },
+    {
+      "name": "Filmow",
+      "url": "https://filmow.com",
+      "search": "https://filmow.com/buscar/?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes"],
+      "concat": "+"
+    },
+    {
+      "name": "Mercado Livre",
+      "url": "https://www.mercadolivre.com.br",
+      "search": "https://lista.mercadolivre.com.br/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Twitch",
+      "url": "https://www.twitch.tv",
+      "search": "https://www.twitch.tv/search?term=",
+      "lastValue": "",
+      "categories": ["geral", "midiasSociais", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Tiktok",
+      "url": "https://www.tiktok.com/?lang=pt-BR",
+      "search": "https://www.tiktok.com/search?lang=pt-BR&q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "midiasSociais"],
+      "concat": " "
+    },
+    {
+      "name": "Tumblr",
+      "url": "https://www.tumblr.com/?language=pt_BR",
+      "search": "https://www.tumblr.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "imagens", "midiasSociais"],
+      "concat": " "
+    },
+    {
+      "name": "Sympla",
+      "url": "https://www.sympla.com.br",
+      "search": "https://www.sympla.com.br/eventos?s=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": "+"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://www.netflix.com/br/",
+      "search": "https://www.netflix.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/?l=brazilian",
+      "search": "https://store.steampowered.com/search/?term=",
+      "lastValue": "",
+      "categories": ["geral", "jogos-esportes"],
+      "concat": "+"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com/pt-br",
+      "search": "https://www.microsoft.com/pt-br/search/explore?q=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": "+"
+    },
+    {
+      "name": "Microsoft Bing",
+      "url": "https://www.bing.com/?cc=br",
+      "search": "https://www.bing.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "Vimeo",
+      "url": "https://vimeo.com/pt-br",
+      "search": "https://vimeo.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes"],
+      "concat": "+"
+    },
+    {
+      "name": "Gearbest",
+      "url": "https://br.gearbest.com/",
+      "search": "https://br.gearbest.com/sale/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/pt-br",
+      "search": "https://www.crunchyroll.com/pt-br/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Globo",
+      "url": "https://www.globo.com",
+      "search": "https://www.globo.com/busca/?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Google Play",
+      "url": "https://play.google.com/store?hl=pt_BR",
+      "search": "https://play.google.com/store/search?hl=pt_BR&q=",
+      "lastValue": "",
+      "categories": ["geral", "jogos-esportes"],
+      "concat": " "
+    },
+    {
+      "name": "Google Earth",
+      "url": "https://earth.google.com",
+      "search": "https://earth.google.com/web/search/",
+      "lastValue": "",
+      "categories": ["geral", "mapas-transporte-restreio"],
+      "concat": "+"
+    },
+    {
+      "name": "Google Academico",
+      "url": "https://scholar.google.com.br/",
+      "search": "https://scholar.google.com.br/scholar?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "Prime Video",
+      "url": "https://www.primevideo.com/?_encoding=UTF8&language=pt_br",
+      "search": "https://www.primevideo.com/search/?language=pt_br&ie=UTF8&phrase=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": "+"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://www.google.com.br/maps",
+      "search": "https://www.google.com.br/maps/place/",
+      "lastValue": "",
+      "categories": ["geral", "mapas-transporte-restreio"],
+      "concat": "+"
+    },
+    {
+      "name": "Zoom",
+      "url": "https://www.zoom.com.br",
+      "search": "https://www.zoom.com.br/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Buscape",
+      "url": "https://www.buscape.com.br",
+      "search": "https://www.buscape.com.br/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Google Shopping",
+      "url": "https://shopping.google.com.br/",
+      "search": "https://www.google.com.br/search?tbm=shop&q=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "+"
+    },
+    {
+      "name": "Google Noticias",
+      "url": "https://news.google.com/topstories?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "search": "https://news.google.com/search?hl=pt-BR&gl=BR&ceid=BR%253Apt-419&q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Google Imagens",
+      "url": "https://www.google.com/imghp?hl=pt-BR",
+      "search": "https://www.google.com/search?hl=pt-BR&tbm=isch&q=",
+      "lastValue": "",
+      "categories": ["geral", "imagens"],
+      "concat": "+"
+    },
+    {
+      "name": "CNN",
+      "url": "https://www.cnnbrasil.com.br/",
+      "search": "https://www.cnnbrasil.com.br/?orderby=date&order=desc&s=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": "+"
+    },
+    {
+      "name": "Governo do Brasil",
+      "url": "https://www.gov.br/pt-br",
+      "search": "https://www.gov.br/pt-br/search?SearchableText=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Submarino",
+      "url": "https://www.submarino.com.br/",
+      "search": "https://www.submarino.com.br/busca/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Magazine Luiza",
+      "url": "https://www.magazineluiza.com.br/",
+      "search": "https://www.magazineluiza.com.br/busca/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "+"
+    },
+    {
+      "name": "Havan",
+      "url": "https://www.havan.com.br/",
+      "search": "https://www.havan.com.br/busca?q=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Americanas",
+      "url": "https://www.americanas.com.br/",
+      "search": "https://www.americanas.com.br/busca/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Youtube Music",
+      "url": "https://music.youtube.com/",
+      "search": "https://music.youtube.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "musicas"],
+      "concat": "+"
+    },
+    {
+      "name": "Globoplay",
+      "url": "https://globoplay.globo.com/",
+      "search": "https://globoplay.globo.com/busca/?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": "+"
+    },
+    {
+      "name": "Imgur",
+      "url": "https://imgur.com/",
+      "search": "https://imgur.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "imagens"],
+      "concat": " "
+    },
+    {
+      "name": "Telecine",
+      "url": "https://www.telecine.com.br/",
+      "search": "https://www.telecine.com.br/search?term=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "Carrefour",
+      "url": "https://www.carrefour.com.br/",
+      "search": "https://www.carrefour.com.br/busca/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Rappi",
+      "url": "https://www.rappi.com.br/",
+      "search": "https://www.rappi.com.br/search?query=",
+      "lastValue": "",
+      "categories": ["geral", "saude-alimentacao"],
+      "concat": " "
+    },
+    {
+      "name": "Investing",
+      "url": "https://br.investing.com/",
+      "search": "https://br.investing.com/search/?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental", "financas"],
+      "concat": " "
+    },
+    {
+      "name": "IMDB",
+      "url": "https://www.imdb.com",
+      "search": "https://www.imdb.com/find?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes"],
+      "concat": "+"
+    },
+    {
+      "name": "Shopee",
+      "url": "https://shopee.com.br",
+      "search": "https://shopee.com.br/search?keyword=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Shein",
+      "url": "https://br.shein.com/",
+      "search": "https://br.shein.com/pdsearch/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Buzzfeed",
+      "url": "https://buzzfeed.com.br/",
+      "search": "https://buzzfeed.com.br/busca?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "UOL",
+      "url": "https://www.uol.com.br/",
+      "search": "https://busca.uol.com.br/result.html?term=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Catho",
+      "url": "https://www.catho.com.br/",
+      "search": "https://www.catho.com.br/vagas/?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": " "
+    },
+    {
+      "name": "Indeed",
+      "url": "https://br.indeed.com/",
+      "search": "https://br.indeed.com/empregos?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": " "
+    },
+    {
+      "name": "Trip Advisor",
+      "url": "https://www.tripadvisor.com.br/",
+      "search": "https://www.tripadvisor.com.br/Search?q=",
+      "lastValue": "",
+      "categories": ["geral", "viagens-hospedagem"],
+      "concat": " "
+    },
+    {
+      "name": "Booking",
+      "url": "https://www.booking.com/index.pt-br.html",
+      "search": "https://www.booking.com/searchresults.pt-br.html?ss=",
+      "lastValue": "",
+      "categories": ["geral", "viagens-hospedagem"],
+      "concat": "+"
+    },
+    {
+      "name": "Dicio",
+      "url": "https://www.dicio.com.br/",
+      "search": "https://www.dicio.com.br/pesquisa.php?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "Reclame Aqui",
+      "url": "https://www.reclameaqui.com.br/",
+      "search": "https://www.reclameaqui.com.br/busca/?q=",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Brainly",
+      "url": "https://brainly.com.br/",
+      "search": "https://brainly.com.br/app/ask?q=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "Tudo Gostoso",
+      "url": "https://www.tudogostoso.com.br/",
+      "search": "https://www.tudogostoso.com.br/busca?q=",
+      "lastValue": "",
+      "categories": ["geral", "saude-alimentacao"],
+      "concat": "+"
+    },
+    {
+      "name": "Tua Saude",
+      "url": "https://www.tuasaude.com/",
+      "search": "https://www.tuasaude.com/busca/?s=",
+      "lastValue": "",
+      "categories": ["geral", "saude-alimentacao"],
+      "concat": "+"
+    },
+    {
+      "name": "Doctoralia",
+      "url": "https://www.doctoralia.com.br/",
+      "search": "https://www.doctoralia.com.br/pesquisa?q=",
+      "lastValue": "",
+      "categories": ["geral", "saude-alimentacao"],
+      "concat": " "
+    },
+    {
+      "name": "Cifra Club",
+      "url": "https://www.cifraclub.com.br/",
+      "search": "https://www.cifraclub.com.br/?q=",
+      "lastValue": "",
+      "categories": ["geral", "musicas"],
+      "concat": "+"
+    },
+    {
+      "name": "Letras",
+      "url": "https://www.letras.mus.br/",
+      "search": "https://www.letras.mus.br/?q=",
+      "lastValue": "",
+      "categories": ["geral", "musicas"],
+      "concat": " "
+    },
+    {
+      "name": "Alura",
+      "url": "https://www.alura.com.br/",
+      "search": "https://www.alura.com.br/busca?query=",
+      "lastValue": "",
+      "categories": ["geral", "trabalho-estudo"],
+      "concat": "+"
+    },
+    {
+      "name": "AOL",
+      "url": "https://www.aol.com/",
+      "search": "https://search.aol.com/aol/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "buscadores"],
+      "concat": "+"
+    },
+    {
+      "name": "4Shared",
+      "url": "https://www.4shared.com/",
+      "search": "https://www.4shared.com/web/q/#query=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": "+"
+    },
+    {
+      "name": "Wayback Machine",
+      "url": "https://web.archive.org/",
+      "search": "https://web.archive.org/web/*/",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": " "
+    },
+    {
+      "name": "Ifood",
+      "url": "https://www.ifood.com.br/restaurantes",
+      "search": "https://www.ifood.com.br/busca?q=",
+      "lastValue": "",
+      "categories": ["geral", "saude-alimentacao"],
+      "concat": " "
+    },
+    {
+      "name": "Le Livros",
+      "url": "https://lelivros.love/",
+      "search": "https://lelivros.love/?s=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": " "
+    },
+    {
+      "name": "Deezer",
+      "url": "https://www.deezer.com/br/",
+      "search": "https://www.deezer.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "musicas", "streaming-lives"],
+      "concat": " "
+    },
+    {
+      "name": "ESPN",
+      "url": "https://www.espn.com.br/",
+      "search": "https://www.espn.com.br/busca/_/q/",
+      "lastValue": "",
+      "categories": ["geral", "jogos-esportes", "noticias-governamental"],
+      "concat": " "
+    },
+    {
+      "name": "Banggood",
+      "url": "https://br.banggood.com/",
+      "search": "https://br.banggood.com/search/",
+      "lastValue": ".html",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Airbnb",
+      "url": "https://www.airbnb.com.br/",
+      "search": "https://www.airbnb.com.br/s/",
+      "lastValue": "/homes",
+      "categories": ["geral", "viagens-hospedagem"],
+      "concat": "-"
+    },
+    {
+      "name": "Casas Bahia",
+      "url": "https://www.casasbahia.com.br/",
+      "search": "https://www.casasbahia.com.br/",
+      "lastValue": "/b",
+      "categories": ["geral", "compra-venda"],
+      "concat": "-"
+    },
+    {
+      "name": "Muambator",
+      "url": "https://www.muambator.com.br/",
+      "search": "https://www.muambator.com.br/pacotes/",
+      "lastValue": "/detalhes",
+      "categories": ["geral", "mapas-transporte-restreio"],
+      "concat": ""
+    },
+    {
+      "name": "Epic Games",
+      "url": "https://www.epicgames.com/store/pt-BR/",
+      "search": "https://www.epicgames.com/store/pt-BR/browse?q=",
+      "lastValue": "",
+      "categories": ["geral", "jogos-esportes"],
+      "concat": " "
+    },
+    {
+      "name": "Apple",
+      "url": "https://www.apple.com/br/",
+      "search": "https://www.apple.com/br/search/",
+      "lastValue": "?src=serp",
+      "categories": ["geral", "outros"],
+      "concat": "-"
+    },
+    {
+      "name": "Dailymotion",
+      "url": "https://www.dailymotion.com/",
+      "search": "https://www.dailymotion.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes"],
+      "concat": " "
+    },
+    {
+      "name": "Gettr",
+      "url": "https://gettr.com/trending",
+      "search": "https://gettr.com/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "midiasSociais"],
+      "concat": " "
+    },
+    {
+      "name": "Odysee",
+      "url": "https://odysee.com/",
+      "search": "https://odysee.com/$/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "videos-filmes"],
+      "concat": " "
+    },
+    {
+      "name": "Binance",
+      "url": "https://www.binance.com/pt-BR",
+      "search": "https://www.binance.com/pt-BR/trade/",
+      "lastValue": "",
+      "categories": ["geral", "financas"],
+      "concat": "_"
+    },
+    {
+      "name": "Wish",
+      "url": "https://www.wish.com/",
+      "search": "https://www.wish.com/search/",
+      "lastValue": "",
+      "categories": ["geral", "compra-venda"],
+      "concat": " "
+    },
+    {
+      "name": "Folha de Sao Paulo",
+      "url": "https://www.folha.uol.com.br/",
+      "search": "https://search.folha.uol.com.br/?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": "+"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/",
+      "search": "https://www.instagram.com/explore/tags/",
+      "lastValue": "",
+      "categories": ["geral", "imagens", "midiasSociais", "streaming-lives"],
+      "concat": ""
+    },
+    {
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/my-drive",
+      "search": "https://drive.google.com/drive/search?q=",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": " "
+    },
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com/mail/u/0/#inbox",
+      "search": "https://mail.google.com/mail/u/0/#search/",
+      "lastValue": "",
+      "categories": ["geral", "outros"],
+      "concat": "+"
+    },
+    {
+      "name": "O Globo",
+      "url": "https://oglobo.globo.com/",
+      "search": "https://oglobo.globo.com/busca/?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": "+"
+    },
+    {
+      "name": "Estadao",
+      "url": "https://www.estadao.com.br/",
+      "search": "https://busca.estadao.com.br/?q=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": "+"
+    },
+    {
+      "name": "Veja",
+      "url": "https://veja.abril.com.br/",
+      "search": "https://veja.abril.com.br/?orderby=date&s=",
+      "lastValue": "",
+      "categories": ["geral", "noticias-governamental"],
+      "concat": "+"
+    }
+  ]
+}
