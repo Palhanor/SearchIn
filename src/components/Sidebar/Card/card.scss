@@ -4,10 +4,10 @@
   &__checkbox {
     display: none;
 
-    &:checked + .card__label {
-      border: 2px solid $logo-light;
-      box-shadow: 0 0 3px $logo-light;
-    }
+    // &:checked + .card__label {
+    //   border: 2px solid $logo-light;
+    //   box-shadow: 0 0 3px $logo-light;
+    // }
   }
 
   &__label {
@@ -35,6 +35,16 @@
     &:hover {
       box-shadow: none;
       border: 1px solid rgba($logo-light, 0.6);
+    }
+
+    &--selected {
+      border: 2px solid $logo-light;
+      box-shadow: 0 0 3px $logo-light;
+
+      &:hover {
+        border: 2px solid $logo-light;
+        box-shadow: 0 0 3px $logo-light;
+      }
     }
   }
 }

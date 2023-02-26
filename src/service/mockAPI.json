@@ -1,6 +1,7 @@
 {
   "websites": [
     {
+      "id": 1,
       "name": "Google",
       "url": "https://www.google.com.br",
       "search": "https://www.google.com.br/search?q=",
@@ -9,6 +10,7 @@
       "concat": "+"
     },
     {
+      "id": 2,
       "name": "Youtube",
       "url": "https://www.youtube.com",
       "search": "https://www.youtube.com/results?search_query=",
@@ -17,6 +19,7 @@
       "concat": "+"
     },
     {
+      "id": 3,
       "name": "Duckduckgo",
       "url": "https://www.duckduckgo.com",
       "search": "https://www.duckduckgo.com/?q=",
@@ -25,6 +28,7 @@
       "concat": "+"
     },
     {
+      "id": 4,
       "name": "Ecosia",
       "url": "https://www.ecosia.org",
       "search": "https://www.ecosia.org/search?q=",
@@ -33,6 +37,7 @@
       "concat": "+"
     },
     {
+      "id": 5,
       "name": "Amazon",
       "url": "https://www.amazon.com.br/",
       "search": "https://www.amazon.com.br/s?k=",
@@ -41,6 +46,7 @@
       "concat": "+"
     },
     {
+      "id": 6,
       "name": "Wikipedia",
       "url": "https://pt.wikipedia.org",
       "search": "https://pt.wikipedia.org/wiki/Especial:Pesquisar/",
@@ -49,6 +55,7 @@
       "concat": "_"
     },
     {
+      "id": 7,
       "name": "Twitter",
       "url": "https://www.twitter.com",
       "search": "https://twitter.com/search?q=",
@@ -57,6 +64,7 @@
       "concat": " "
     },
     {
+      "id": 8,
       "name": "Reddit",
       "url": "https://www.reddit.com",
       "search": "https://www.reddit.com/search/?q=",
@@ -65,6 +73,7 @@
       "concat": " "
     },
     {
+      "id": 9,
       "name": "Spotify",
       "url": "https://www.spotify.com/br/",
       "search": "https://open.spotify.com/search/",
@@ -73,6 +82,7 @@
       "concat": " "
     },
     {
+      "id": 10,
       "name": "Linkedin",
       "url": "https://br.linkedin.com/",
       "search": "https://www.linkedin.com/search/results/all/?keywords=",
@@ -81,6 +91,7 @@
       "concat": " "
     },
     {
+      "id": 11,
       "name": "Facebook",
       "url": "https://pt-br.facebook.com/",
       "search": "https://www.facebook.com/search?q=",
@@ -89,6 +100,7 @@
       "concat": " "
     },
     {
+      "id": 12,
       "name": "Github",
       "url": "https://www.github.com",
       "search": "https://github.com/search?q=",
@@ -97,6 +109,7 @@
       "concat": "+"
     },
     {
+      "id": 13,
       "name": "Pinterest",
       "url": "https://br.pinterest.com/",
       "search": "https://br.pinterest.com/search/pins/?q=",
@@ -105,6 +118,7 @@
       "concat": " "
     },
     {
+      "id": 14,
       "name": "Aliexpress",
       "url": "https://pt.aliexpress.com/",
       "search": "https://pt.aliexpress.com/wholesale?SearchText=",
@@ -113,6 +127,7 @@
       "concat": "+"
     },
     {
+      "id": 15,
       "name": "Yahoo",
       "url": "https://br.yahoo.com/",
       "search": "https://br.search.yahoo.com/search?p=",
@@ -121,6 +136,7 @@
       "concat": "+"
     },
     {
+      "id": 16,
       "name": "Udemy",
       "url": "https://www.udemy.com/pt/",
       "search": "https://www.udemy.com/courses/search/?q=",
@@ -129,6 +145,7 @@
       "concat": "+"
     },
     {
+      "id": 17,
       "name": "Coursera",
       "url": "https://pt.coursera.org/",
       "search": "https://pt.coursera.org/search?query=",
@@ -137,6 +154,7 @@
       "concat": " "
     },
     {
+      "id": 18,
       "name": "Giphy",
       "url": "https://giphy.com",
       "search": "https://giphy.com/search/",
@@ -145,6 +163,7 @@
       "concat": "-"
     },
     {
+      "id": 19,
       "name": "Soundcloud",
       "url": "https://soundcloud.com",
       "search": "https://soundcloud.com/search?q=",
@@ -153,6 +172,7 @@
       "concat": " "
     },
     {
+      "id": 20,
       "name": "Wikihow",
       "url": "https://pt.wikihow.com/",
       "search": "https://pt.wikihow.com/wikiHowTo?search=",
@@ -161,6 +181,7 @@
       "concat": "+"
     },
     {
+      "id": 21,
       "name": "Filmow",
       "url": "https://filmow.com",
       "search": "https://filmow.com/buscar/?q=",
@@ -169,6 +190,7 @@
       "concat": "+"
     },
     {
+      "id": 22,
       "name": "Mercado Livre",
       "url": "https://www.mercadolivre.com.br",
       "search": "https://lista.mercadolivre.com.br/",
@@ -177,6 +199,7 @@
       "concat": "-"
     },
     {
+      "id": 23,
       "name": "Twitch",
       "url": "https://www.twitch.tv",
       "search": "https://www.twitch.tv/search?term=",
@@ -185,6 +208,7 @@
       "concat": " "
     },
     {
+      "id": 24,
       "name": "Tiktok",
       "url": "https://www.tiktok.com/?lang=pt-BR",
       "search": "https://www.tiktok.com/search?lang=pt-BR&q=",
@@ -193,6 +217,7 @@
       "concat": " "
     },
     {
+      "id": 25,
       "name": "Tumblr",
       "url": "https://www.tumblr.com/?language=pt_BR",
       "search": "https://www.tumblr.com/search/",
@@ -201,6 +226,7 @@
       "concat": " "
     },
     {
+      "id": 26,
       "name": "Sympla",
       "url": "https://www.sympla.com.br",
       "search": "https://www.sympla.com.br/eventos?s=",
@@ -209,6 +235,7 @@
       "concat": "+"
     },
     {
+      "id": 27,
       "name": "Netflix",
       "url": "https://www.netflix.com/br/",
       "search": "https://www.netflix.com/search?q=",
@@ -217,6 +244,7 @@
       "concat": " "
     },
     {
+      "id": 28,
       "name": "Steam",
       "url": "https://store.steampowered.com/?l=brazilian",
       "search": "https://store.steampowered.com/search/?term=",
@@ -225,6 +253,7 @@
       "concat": "+"
     },
     {
+      "id": 29,
       "name": "Microsoft",
       "url": "https://www.microsoft.com/pt-br",
       "search": "https://www.microsoft.com/pt-br/search/explore?q=",
@@ -233,6 +262,7 @@
       "concat": "+"
     },
     {
+      "id": 30,
       "name": "Microsoft Bing",
       "url": "https://www.bing.com/?cc=br",
       "search": "https://www.bing.com/search?q=",
@@ -241,6 +271,7 @@
       "concat": "+"
     },
     {
+      "id": 31,
       "name": "Vimeo",
       "url": "https://vimeo.com/pt-br",
       "search": "https://vimeo.com/search?q=",
@@ -249,6 +280,7 @@
       "concat": "+"
     },
     {
+      "id": 32,
       "name": "Gearbest",
       "url": "https://br.gearbest.com/",
       "search": "https://br.gearbest.com/sale/",
@@ -257,6 +289,7 @@
       "concat": "-"
     },
     {
+      "id": 33,
       "name": "Crunchyroll",
       "url": "https://www.crunchyroll.com/pt-br",
       "search": "https://www.crunchyroll.com/pt-br/search?q=",
@@ -265,6 +298,7 @@
       "concat": " "
     },
     {
+      "id": 34,
       "name": "Globo",
       "url": "https://www.globo.com",
       "search": "https://www.globo.com/busca/?q=",
@@ -273,6 +307,7 @@
       "concat": " "
     },
     {
+      "id": 35,
       "name": "Google Play",
       "url": "https://play.google.com/store?hl=pt_BR",
       "search": "https://play.google.com/store/search?hl=pt_BR&q=",
@@ -281,6 +316,7 @@
       "concat": " "
     },
     {
+      "id": 36,
       "name": "Google Earth",
       "url": "https://earth.google.com",
       "search": "https://earth.google.com/web/search/",
@@ -289,6 +325,7 @@
       "concat": "+"
     },
     {
+      "id": 37,
       "name": "Google Academico",
       "url": "https://scholar.google.com.br/",
       "search": "https://scholar.google.com.br/scholar?q=",
@@ -297,6 +334,7 @@
       "concat": "+"
     },
     {
+      "id": 38,
       "name": "Prime Video",
       "url": "https://www.primevideo.com/?_encoding=UTF8&language=pt_br",
       "search": "https://www.primevideo.com/search/?language=pt_br&ie=UTF8&phrase=",
@@ -305,6 +343,7 @@
       "concat": "+"
     },
     {
+      "id": 39,
       "name": "Google Maps",
       "url": "https://www.google.com.br/maps",
       "search": "https://www.google.com.br/maps/place/",
@@ -313,6 +352,7 @@
       "concat": "+"
     },
     {
+      "id": 40,
       "name": "Zoom",
       "url": "https://www.zoom.com.br",
       "search": "https://www.zoom.com.br/search?q=",
@@ -321,6 +361,7 @@
       "concat": " "
     },
     {
+      "id": 41,
       "name": "Buscape",
       "url": "https://www.buscape.com.br",
       "search": "https://www.buscape.com.br/search?q=",
@@ -329,6 +370,7 @@
       "concat": " "
     },
     {
+      "id": 42,
       "name": "Google Shopping",
       "url": "https://shopping.google.com.br/",
       "search": "https://www.google.com.br/search?tbm=shop&q=",
@@ -337,6 +379,7 @@
       "concat": "+"
     },
     {
+      "id": 43,
       "name": "Google Noticias",
       "url": "https://news.google.com/topstories?hl=pt-BR&gl=BR&ceid=BR:pt-419",
       "search": "https://news.google.com/search?hl=pt-BR&gl=BR&ceid=BR%253Apt-419&q=",
@@ -345,6 +388,7 @@
       "concat": " "
     },
     {
+      "id": 44,
       "name": "Google Imagens",
       "url": "https://www.google.com/imghp?hl=pt-BR",
       "search": "https://www.google.com/search?hl=pt-BR&tbm=isch&q=",
@@ -353,6 +397,7 @@
       "concat": "+"
     },
     {
+      "id": 45,
       "name": "CNN",
       "url": "https://www.cnnbrasil.com.br/",
       "search": "https://www.cnnbrasil.com.br/?orderby=date&order=desc&s=",
@@ -361,6 +406,7 @@
       "concat": "+"
     },
     {
+      "id": 46,
       "name": "Governo do Brasil",
       "url": "https://www.gov.br/pt-br",
       "search": "https://www.gov.br/pt-br/search?SearchableText=",
@@ -369,6 +415,7 @@
       "concat": " "
     },
     {
+      "id": 47,
       "name": "Submarino",
       "url": "https://www.submarino.com.br/",
       "search": "https://www.submarino.com.br/busca/",
@@ -377,6 +424,7 @@
       "concat": "-"
     },
     {
+      "id": 48,
       "name": "Magazine Luiza",
       "url": "https://www.magazineluiza.com.br/",
       "search": "https://www.magazineluiza.com.br/busca/",
@@ -385,6 +433,7 @@
       "concat": "+"
     },
     {
+      "id": 49,
       "name": "Havan",
       "url": "https://www.havan.com.br/",
       "search": "https://www.havan.com.br/busca?q=",
@@ -393,6 +442,7 @@
       "concat": " "
     },
     {
+      "id": 50,
       "name": "Americanas",
       "url": "https://www.americanas.com.br/",
       "search": "https://www.americanas.com.br/busca/",
@@ -401,6 +451,7 @@
       "concat": "-"
     },
     {
+      "id": 51,
       "name": "Youtube Music",
       "url": "https://music.youtube.com/",
       "search": "https://music.youtube.com/search?q=",
@@ -409,6 +460,7 @@
       "concat": "+"
     },
     {
+      "id": 52,
       "name": "Globoplay",
       "url": "https://globoplay.globo.com/",
       "search": "https://globoplay.globo.com/busca/?q=",
@@ -417,6 +469,7 @@
       "concat": "+"
     },
     {
+      "id": 53,
       "name": "Imgur",
       "url": "https://imgur.com/",
       "search": "https://imgur.com/search?q=",
@@ -425,6 +478,7 @@
       "concat": " "
     },
     {
+      "id": 54,
       "name": "Telecine",
       "url": "https://www.telecine.com.br/",
       "search": "https://www.telecine.com.br/search?term=",
@@ -433,6 +487,7 @@
       "concat": " "
     },
     {
+      "id": 55,
       "name": "Carrefour",
       "url": "https://www.carrefour.com.br/",
       "search": "https://www.carrefour.com.br/busca/",
@@ -441,6 +496,7 @@
       "concat": " "
     },
     {
+      "id": 56,
       "name": "Rappi",
       "url": "https://www.rappi.com.br/",
       "search": "https://www.rappi.com.br/search?query=",
@@ -449,6 +505,7 @@
       "concat": " "
     },
     {
+      "id": 57,
       "name": "Investing",
       "url": "https://br.investing.com/",
       "search": "https://br.investing.com/search/?q=",
@@ -457,6 +514,7 @@
       "concat": " "
     },
     {
+      "id": 58,
       "name": "IMDB",
       "url": "https://www.imdb.com",
       "search": "https://www.imdb.com/find?q=",
@@ -465,6 +523,7 @@
       "concat": "+"
     },
     {
+      "id": 59,
       "name": "Shopee",
       "url": "https://shopee.com.br",
       "search": "https://shopee.com.br/search?keyword=",
@@ -473,6 +532,7 @@
       "concat": " "
     },
     {
+      "id": 60,
       "name": "Shein",
       "url": "https://br.shein.com/",
       "search": "https://br.shein.com/pdsearch/",
@@ -481,6 +541,7 @@
       "concat": " "
     },
     {
+      "id": 61,
       "name": "Buzzfeed",
       "url": "https://buzzfeed.com.br/",
       "search": "https://buzzfeed.com.br/busca?q=",
@@ -489,6 +550,7 @@
       "concat": " "
     },
     {
+      "id": 62,
       "name": "UOL",
       "url": "https://www.uol.com.br/",
       "search": "https://busca.uol.com.br/result.html?term=",
@@ -497,6 +559,7 @@
       "concat": " "
     },
     {
+      "id": 63,
       "name": "Catho",
       "url": "https://www.catho.com.br/",
       "search": "https://www.catho.com.br/vagas/?q=",
@@ -505,6 +568,7 @@
       "concat": " "
     },
     {
+      "id": 64,
       "name": "Indeed",
       "url": "https://br.indeed.com/",
       "search": "https://br.indeed.com/empregos?q=",
@@ -513,6 +577,7 @@
       "concat": " "
     },
     {
+      "id": 65,
       "name": "Trip Advisor",
       "url": "https://www.tripadvisor.com.br/",
       "search": "https://www.tripadvisor.com.br/Search?q=",
@@ -521,6 +586,7 @@
       "concat": " "
     },
     {
+      "id": 66,
       "name": "Booking",
       "url": "https://www.booking.com/index.pt-br.html",
       "search": "https://www.booking.com/searchresults.pt-br.html?ss=",
@@ -529,6 +595,7 @@
       "concat": "+"
     },
     {
+      "id": 67,
       "name": "Dicio",
       "url": "https://www.dicio.com.br/",
       "search": "https://www.dicio.com.br/pesquisa.php?q=",
@@ -537,6 +604,7 @@
       "concat": "+"
     },
     {
+      "id": 68,
       "name": "Reclame Aqui",
       "url": "https://www.reclameaqui.com.br/",
       "search": "https://www.reclameaqui.com.br/busca/?q=",
@@ -545,6 +613,7 @@
       "concat": " "
     },
     {
+      "id": 69,
       "name": "Brainly",
       "url": "https://brainly.com.br/",
       "search": "https://brainly.com.br/app/ask?q=",
@@ -553,6 +622,7 @@
       "concat": "+"
     },
     {
+      "id": 70,
       "name": "Tudo Gostoso",
       "url": "https://www.tudogostoso.com.br/",
       "search": "https://www.tudogostoso.com.br/busca?q=",
@@ -561,6 +631,7 @@
       "concat": "+"
     },
     {
+      "id": 71,
       "name": "Tua Saude",
       "url": "https://www.tuasaude.com/",
       "search": "https://www.tuasaude.com/busca/?s=",
@@ -569,6 +640,7 @@
       "concat": "+"
     },
     {
+      "id": 72,
       "name": "Doctoralia",
       "url": "https://www.doctoralia.com.br/",
       "search": "https://www.doctoralia.com.br/pesquisa?q=",
@@ -577,6 +649,7 @@
       "concat": " "
     },
     {
+      "id": 73,
       "name": "Cifra Club",
       "url": "https://www.cifraclub.com.br/",
       "search": "https://www.cifraclub.com.br/?q=",
@@ -585,6 +658,7 @@
       "concat": "+"
     },
     {
+      "id": 74,
       "name": "Letras",
       "url": "https://www.letras.mus.br/",
       "search": "https://www.letras.mus.br/?q=",
@@ -593,6 +667,7 @@
       "concat": " "
     },
     {
+      "id": 75,
       "name": "Alura",
       "url": "https://www.alura.com.br/",
       "search": "https://www.alura.com.br/busca?query=",
@@ -601,6 +676,7 @@
       "concat": "+"
     },
     {
+      "id": 76,
       "name": "AOL",
       "url": "https://www.aol.com/",
       "search": "https://search.aol.com/aol/search?q=",
@@ -609,6 +685,7 @@
       "concat": "+"
     },
     {
+      "id": 77,
       "name": "4Shared",
       "url": "https://www.4shared.com/",
       "search": "https://www.4shared.com/web/q/#query=",
@@ -617,6 +694,7 @@
       "concat": "+"
     },
     {
+      "id": 78,
       "name": "Wayback Machine",
       "url": "https://web.archive.org/",
       "search": "https://web.archive.org/web/*/",
@@ -625,6 +703,7 @@
       "concat": " "
     },
     {
+      "id": 79,
       "name": "Ifood",
       "url": "https://www.ifood.com.br/restaurantes",
       "search": "https://www.ifood.com.br/busca?q=",
@@ -633,6 +712,7 @@
       "concat": " "
     },
     {
+      "id": 80,
       "name": "Le Livros",
       "url": "https://lelivros.love/",
       "search": "https://lelivros.love/?s=",
@@ -641,6 +721,7 @@
       "concat": " "
     },
     {
+      "id": 81,
       "name": "Deezer",
       "url": "https://www.deezer.com/br/",
       "search": "https://www.deezer.com/search/",
@@ -649,6 +730,7 @@
       "concat": " "
     },
     {
+      "id": 82,
       "name": "ESPN",
       "url": "https://www.espn.com.br/",
       "search": "https://www.espn.com.br/busca/_/q/",
@@ -657,6 +739,7 @@
       "concat": " "
     },
     {
+      "id": 83,
       "name": "Banggood",
       "url": "https://br.banggood.com/",
       "search": "https://br.banggood.com/search/",
@@ -665,6 +748,7 @@
       "concat": "-"
     },
     {
+      "id": 84,
       "name": "Airbnb",
       "url": "https://www.airbnb.com.br/",
       "search": "https://www.airbnb.com.br/s/",
@@ -673,6 +757,7 @@
       "concat": "-"
     },
     {
+      "id": 85,
       "name": "Casas Bahia",
       "url": "https://www.casasbahia.com.br/",
       "search": "https://www.casasbahia.com.br/",
@@ -681,6 +766,7 @@
       "concat": "-"
     },
     {
+      "id": 86,
       "name": "Muambator",
       "url": "https://www.muambator.com.br/",
       "search": "https://www.muambator.com.br/pacotes/",
@@ -689,6 +775,7 @@
       "concat": ""
     },
     {
+      "id": 87,
       "name": "Epic Games",
       "url": "https://www.epicgames.com/store/pt-BR/",
       "search": "https://www.epicgames.com/store/pt-BR/browse?q=",
@@ -697,6 +784,7 @@
       "concat": " "
     },
     {
+      "id": 88,
       "name": "Apple",
       "url": "https://www.apple.com/br/",
       "search": "https://www.apple.com/br/search/",
@@ -705,6 +793,7 @@
       "concat": "-"
     },
     {
+      "id": 89,
       "name": "Dailymotion",
       "url": "https://www.dailymotion.com/",
       "search": "https://www.dailymotion.com/search/",
@@ -713,6 +802,7 @@
       "concat": " "
     },
     {
+      "id": 90,
       "name": "Gettr",
       "url": "https://gettr.com/trending",
       "search": "https://gettr.com/search?q=",
@@ -721,6 +811,7 @@
       "concat": " "
     },
     {
+      "id": 91,
       "name": "Odysee",
       "url": "https://odysee.com/",
       "search": "https://odysee.com/$/search?q=",
@@ -729,6 +820,7 @@
       "concat": " "
     },
     {
+      "id": 92,
       "name": "Binance",
       "url": "https://www.binance.com/pt-BR",
       "search": "https://www.binance.com/pt-BR/trade/",
@@ -737,6 +829,7 @@
       "concat": "_"
     },
     {
+      "id": 93,
       "name": "Wish",
       "url": "https://www.wish.com/",
       "search": "https://www.wish.com/search/",
@@ -745,6 +838,7 @@
       "concat": " "
     },
     {
+      "id": 94,
       "name": "Folha de Sao Paulo",
       "url": "https://www.folha.uol.com.br/",
       "search": "https://search.folha.uol.com.br/?q=",
@@ -753,6 +847,7 @@
       "concat": "+"
     },
     {
+      "id": 95,
       "name": "Instagram",
       "url": "https://www.instagram.com/",
       "search": "https://www.instagram.com/explore/tags/",
@@ -761,6 +856,7 @@
       "concat": ""
     },
     {
+      "id": 96,
       "name": "Google Drive",
       "url": "https://drive.google.com/drive/my-drive",
       "search": "https://drive.google.com/drive/search?q=",
@@ -769,6 +865,7 @@
       "concat": " "
     },
     {
+      "id": 97,
       "name": "Gmail",
       "url": "https://mail.google.com/mail/u/0/#inbox",
       "search": "https://mail.google.com/mail/u/0/#search/",
@@ -777,6 +874,7 @@
       "concat": "+"
     },
     {
+      "id": 98,
       "name": "O Globo",
       "url": "https://oglobo.globo.com/",
       "search": "https://oglobo.globo.com/busca/?q=",
@@ -785,6 +883,7 @@
       "concat": "+"
     },
     {
+      "id": 99,
       "name": "Estadao",
       "url": "https://www.estadao.com.br/",
       "search": "https://busca.estadao.com.br/?q=",
@@ -793,6 +892,7 @@
       "concat": "+"
     },
     {
+      "id": 100,
       "name": "Veja",
       "url": "https://veja.abril.com.br/",
       "search": "https://veja.abril.com.br/?orderby=date&s=",

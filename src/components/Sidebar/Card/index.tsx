@@ -1,6 +1,28 @@
+import Website from "../../../interfaces/website";
 import "./card.scss";
 
-export default function Card({ website }: { website: any }) {
+export default function Card({
+  website,
+  setWebsites,
+}: {
+  website: Website;
+  setWebsites: React.Dispatch<React.SetStateAction<Website[]>>;
+}) {
+  const handleClick = (): void => {
+    const newWebsiteState: Website = {
+      ...website,
+      selected: !website.selected,
+    };
+
+    setWebsites((websites) =>
+      websites.map((currentWebsite) =>
+        currentWebsite.id == newWebsiteState.id
+          ? newWebsiteState
+          : currentWebsite
+      )
+    );
+  };
+
   return (
     <>
       <input
@@ -11,7 +33,9 @@ export default function Card({ website }: { website: any }) {
         value={website.name}
       />
       <label
-        className="card__label"
+        className={
+          website.selected ? "card__label card__label--selected" : "card__label"
+        }
         htmlFor={website.name}
         tabIndex={0}
         style={{
@@ -19,6 +43,7 @@ export default function Card({ website }: { website: any }) {
             .replaceAll(" ", "")
             .toLowerCase()}.png')`,
         }}
+        onClick={handleClick}
       ></label>
     </>
   );

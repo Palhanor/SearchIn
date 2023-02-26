@@ -1,45 +1,45 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdSortByAlpha } from "react-icons/md";
 import Card from "./Card";
+import Website from "../../interfaces/website";
 import "./sidebar.scss";
 
 export default function Sidebar({
   sidebarIsVisible,
   websites,
+  setWebsites,
 }: {
   sidebarIsVisible: boolean;
-  websites: any[];
+  websites: Website[];
+  setWebsites: React.Dispatch<React.SetStateAction<Website[]>>;
 }) {
   const [filter, setFilter] = useState<string>("");
   const [category, setCategory] = useState<string>("geral");
   const [ascendentOrder, setAscendentOrder] = useState<boolean>(true);
 
-  useEffect(() => {
-    orderWebsites;
-  }, [ascendentOrder]);
-
-  const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFilter = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setFilter(() => event.target.value);
   };
 
-  const handleClearFilter = () => {
+  const handleClearFilter = (): void => {
     setFilter(() => "");
   };
 
-  const handleCategories = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleCategories = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
     setCategory(event.target.value);
   };
 
-  const handleOrder = () => {
+  const handleOrder = (): void => {
     setAscendentOrder((order) => !order);
-    console.log(ascendentOrder);
   };
 
-  const orderWebsites = (websitesList: any[]) => {
-    if (ascendentOrder)
-      return websitesList.sort((a, b) => (a.name > b.name ? 1 : -1));
-    else
-      return websitesList.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  const orderWebsites = (websitesList: Website[]): Website[] => {
+    const sortedWebsites: Website[] = websitesList.sort((a, b) =>
+      a.name > b.name ? 1 : -1
+    );
+    return ascendentOrder ? sortedWebsites : sortedWebsites.reverse();
   };
 
   return (
@@ -103,7 +103,15 @@ export default function Sidebar({
           <h2 className="card-group__title">Selecionados</h2>
           {/* <span className="card-group__placeholder" data-selected-placeholder>Não há buscadores selecionados</span> */}
           <div>
-            {/* AQUI DEVEM FICAR TODOS OS CARDS DOS BUSCADORES SELECIONADOS PARA A BUSCA */}
+            {orderWebsites(websites)
+              .filter((website) => website.selected)
+              .map((website) => (
+                <Card
+                  key={website.id}
+                  website={website}
+                  setWebsites={setWebsites}
+                ></Card>
+              ))}
           </div>
         </div>
 
@@ -120,10 +128,15 @@ export default function Sidebar({
               .filter(
                 (website) =>
                   website.name.toLowerCase().includes(filter) &&
-                  website.categories.indexOf(category) !== -1
+                  website.categories.indexOf(category) !== -1 &&
+                  !website.selected
               )
-              .map((website, i) => (
-                <Card key={i} website={website}></Card>
+              .map((website) => (
+                <Card
+                  key={website.id}
+                  website={website}
+                  setWebsites={setWebsites}
+                ></Card>
               ))}
           </div>
         </div>

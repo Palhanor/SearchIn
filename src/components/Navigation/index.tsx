@@ -7,7 +7,7 @@ export default function Navigation({
   sidebarIsVisible: boolean,
   setSidebarIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const handleNavbar = () => {
+  const handleNavbar = (): void => {
     setSidebarIsVisible((state) => !state);
   };
 
