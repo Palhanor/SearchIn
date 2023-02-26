@@ -3,32 +3,7 @@
 .search {
   width: 100%;
 
-  .menu-icon {
-    align-items: center;
-    background-image: url("../../assets/icons/icon-menu.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    display: flex;
-    float: right;
-    height: 2.5rem;
-    margin: 1.5rem;
-    transition: 0.3s ease-in-out;
-    width: 2.5rem;
-
-    @include xlg-mob {
-      height: 3rem;
-      margin: 1.5rem 3rem;
-      width: 3rem;
-    }
-
-    &:hover {
-      background-image: url("../../assets/icons/icon-menu-hover.svg");
-    }
-  }
-
-  .gloopex-logo {
+  .searchin-logo {
     clear: both;
     display: block;
     font-size: 3rem;
@@ -37,7 +12,7 @@
     width: 65%;
 
     @include xlg-mob {
-      margin: 20vh auto 1rem;
+      margin: 20vh auto 2rem;
       width: 45%;
     }
 
@@ -46,7 +21,7 @@
     }
   }
 
-  .gloopex-slogan {
+  .searchin-slogan {
     color: $dark-gray;
     display: block;
     font-size: 1.2rem;
@@ -55,7 +30,7 @@
     text-align: center;
 
     @include xlg-mob {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -181,5 +156,48 @@
     @include xlg-mob {
       display: none;
     }
+  }
+
+  .expected_result {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+    max-width: 50vw;
+    overflow: none;
+    line-height: 2rem;
+  }
+
+  .number_occurrences {
+    color: $white;
+    border-radius: 16px;
+    padding: 5px;
+    font-size: .77rem;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    line-height: .9rem;
+    
+    &--regular {
+    background-color: $blue-gray;
+    }
+
+    &--atention {
+      background-color: rgb(191, 191, 0);
+    }
+    &--alert {
+      background-color: darkorange;
+    }
+    &--danger {
+      background-color: darkred;
+    }
+  }
+
+  &_snippet {
+    background-color: $navigation-bg;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 5px;
   }
 }
