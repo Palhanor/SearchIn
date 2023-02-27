@@ -5,6 +5,9 @@
 - Aplicar responsividade (mabile)
 - Fazer seleção de buscador por Tab funcionar
 - Usar tooltip para as ferramentas de navegação
+- Editar os valores da busca através da previsualização (editar ou excluir)
+- Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
+- Manter os selecionados na ordem de seleção para evitar problemas com o specific multisearch
 
 ### Modos de busca
 

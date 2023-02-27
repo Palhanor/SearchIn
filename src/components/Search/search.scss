@@ -44,7 +44,7 @@
     }
 
     @include xlg-mob {
-      margin: 1rem auto;
+      margin: 1rem auto 4rem;
       width: 70%;
     }
 
@@ -156,48 +156,5 @@
     @include xlg-mob {
       display: none;
     }
-  }
-
-  .expected_result {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 5rem;
-    max-width: 50vw;
-    overflow: none;
-    line-height: 2rem;
-  }
-
-  .number_occurrences {
-    color: $white;
-    border-radius: 16px;
-    padding: 5px;
-    font-size: .77rem;
-    width: 13px;
-    height: 13px;
-    display: inline-block;
-    margin-right: 5px;
-    text-align: center;
-    line-height: .9rem;
-    
-    &--regular {
-    background-color: $blue-gray;
-    }
-
-    &--atention {
-      background-color: rgb(191, 191, 0);
-    }
-    &--alert {
-      background-color: darkorange;
-    }
-    &--danger {
-      background-color: darkred;
-    }
-  }
-
-  &_snippet {
-    background-color: $navigation-bg;
-    border-radius: 3px;
-    padding: 5px;
-    margin-right: 5px;
   }
 }
