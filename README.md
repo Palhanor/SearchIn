@@ -2,20 +2,19 @@
 
 ### Próximas etapas
 
-- Aplicar responsividade (mabile)
-- Fazer seleção de buscador por Tab funcionar
+- Aplicar responsividade (mobile)
+- Criar as interfaces dos componentes
+- Fazer correções de performance para React
 - Usar tooltip para as ferramentas de navegação
 - Editar os valores da busca através da previsualização (editar ou excluir)
 - Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
-- Manter os selecionados na ordem de seleção para evitar problemas com o specific multisearch
+- Manter os selecionados na ordem de seleção (modificar o getSelectedWebsites o componente Search)
 
 ### Modos de busca
 
 - [x] Busca simples
-- [x] Busca multipla
-- [ ] Busca multipla combinada
-- [ ] Busca múltipa diferenciada
-- [ ] ...?
+- [x] Busca múltipla básica
+- [x] Busca múltipa avançada
 
 ### Feramentas (barra de navegação)
 
@@ -24,17 +23,14 @@
 - [x] Buscadores
 - [ ] Default
 - [ ] Favoritos
-
-**Intermediario**
-
 - [ ] Dicas
-- [ ] Temas ()
 
 **Depois**
 
-- [ ] Login / Cadastro (depois)
-- [ ] Menu (depois)
-- [ ] Buscador Searchin (depois)
+- [ ] Temas
+- [ ] Login / Cadastro
+- [ ] Menu
+- [ ] Buscador Searchin
 
 ## Buscadores adicionais
 
@@ -50,7 +46,11 @@
 10. Behance
 11. Discord (?)
 12. ChatGPT (?)
-13. Tradutores...
-14. Sistemas de voo...
-15. Sistemas de transporte...
-16. Mecanismos com buscas estranhas
+13. SciHub...
+14. LibGen...
+15. ZLibrary...
+16. PirateBay...
+17. Tradutores...
+18. Sistemas de voo...
+19. Sistemas de transporte...
+20. Mecanismos com buscas estranhas

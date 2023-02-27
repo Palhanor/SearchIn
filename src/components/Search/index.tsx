@@ -1,66 +1,48 @@
-// TODO: Refatorar o código
-
 import { useEffect, useState } from "react";
 import Preview from "./Preview";
 import Website from "../../interfaces/website";
 import searchin from "../../assets/icons/searchin_logo.svg";
 import "./search.scss";
 
-export default function Search({
-  websites,
-  searchValue,
-  setSearchValue,
-}: {
-  websites: Website[];
-  searchValue: string;
-  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
-}) {
-  const [specificQueries, setSpecificQueries] = useState<string[]>([""]);
+export default function Search({ websites }: { websites: Website[] }) {
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [advancedQueries, setAdvancedQueries] = useState<string[]>([""]);
   const [selectedWebsites, setSelectedWebsites] = useState<Website[]>([]);
 
   useEffect(() => {
-    setSelectedWebsites(() => searchSelectedWebsites(websites));
+    setSelectedWebsites(() => getSelectedWebsites(websites));
   }, [websites]);
 
-  const handleInputValue = (
+  const handleSearchValues = (
     event: React.ChangeEvent<HTMLInputElement>
   ): void => {
     setSearchValue(() => event.target.value);
-    setSpecificQueries(() => findSpecificQueries(event.target.value));
+    setAdvancedQueries(() => getAdvancedQueries(event.target.value));
   };
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    if (isSpecificMultisearch()) {
-      executeSpecificSearch();
-    } else {
-      executeGenericSearch();
-    }
-    clearSearchValue();
+
+    if (isAdvancedSearch()) advancedSearch();
+    else basicSearch();
+
+    clearSearchValues();
   };
 
-  const executeSpecificSearch = (): void => {
-    for (let i = 0; i < specificQueries.length; i++) {
-      const genericQueries: string[] = specificQueries[i].split(
-        /(?:\b|\s+)\|(?:\b|\s+)/g
-      );
-      genericQueries.forEach((query) => {
-        const thereIsWebsite: boolean = !!selectedWebsites[i];
-        if (thereIsWebsite) {
-          openWebsite(
-            selectedWebsites[i].search,
-            query,
-            selectedWebsites[i].lastValue
-          );
-          const isLastQuerie: boolean = i == specificQueries.length - 1;
-          const theresMoreWebsites: boolean = selectedWebsites.length > i;
+  const advancedSearch = (): void => {
+    for (let i = 0; i < advancedQueries.length; i++) {
+      const query = advancedQueries[i];
+      const basicQueries: string[] = query.split(/(?:\b|\s+)\|(?:\b|\s+)/g);
+      const website: Website = selectedWebsites[i];
+      const isLastQuerie: boolean = i == advancedQueries.length - 1;
+      const theresMoreWebsites: boolean = selectedWebsites.length > i;
+      basicQueries.forEach((query) => {
+        if (website) {
+          openWebsite(website.search, query, website.lastValue);
           if (isLastQuerie && theresMoreWebsites) {
             for (let j = i + 1; j < selectedWebsites.length; j++) {
-              openWebsite(
-                selectedWebsites[j].search,
-                query,
-                selectedWebsites[j].lastValue
-              );
+              const nextWebsites = selectedWebsites[j];
+              openWebsite(nextWebsites.search, query, nextWebsites.lastValue);
             }
           }
         }
@@ -68,19 +50,16 @@ export default function Search({
     }
   };
 
-  const executeGenericSearch = (): void => {
+  const basicSearch = (): void => {
+    const inputIsEmpty: boolean = !searchValue;
+    const basicQueries = advancedQueries[0].split(/(?:\b|\s+)\|(?:\b|\s+)/g);
     selectedWebsites.forEach((website) => {
-      if (!searchValue) {
+      if (inputIsEmpty) {
         window.open(`${website.url}`, "_blank");
       } else {
-        specificQueries.forEach((queries) => {
-          const genericQueries: string[] = queries.split(
-            /(?:\b|\s+)\|(?:\b|\s+)/g
-          );
-          genericQueries.forEach((query) => {
-            openWebsite(website.search, query, website.lastValue);
-          });
-        });
+        basicQueries.forEach((query) =>
+          openWebsite(website.search, query, website.lastValue)
+        );
       }
     });
   };
@@ -89,51 +68,46 @@ export default function Search({
     window.open(`${initial}${value}${final}`, "_blank");
   };
 
-  const clearSearchValue = (): void => {
+  const clearSearchValues = (): void => {
     setSearchValue(() => "");
-    setSpecificQueries(() => [""]);
+    setAdvancedQueries(() => [""]);
   };
 
-  const isSpecificMultisearch = (): boolean => {
-    const regEx: RegExp = /(?:\b|\s+)\^(?:\b|\s+)/g;
-    return regEx.test(searchValue);
+  const isAdvancedSearch = (): boolean => {
+    return /(?:\b|\s+)\^(?:\b|\s+)/g.test(searchValue);
   };
 
-  const findSpecificQueries = (value: string): string[] => {
-    const regEx: RegExp = /(?:\b|\s+)\^(?:\b|\s+)/g;
-    const queryList: string[] = value.split(regEx);
-    return queryList;
+  const getAdvancedQueries = (value: string): string[] => {
+    return value.split(/(?:\b|\s+)\^(?:\b|\s+)/g);
   };
 
-  const searchSelectedWebsites = (websites: Website[]): Website[] => {
+  const getSelectedWebsites = (websites: Website[]): Website[] => {
     return websites
       .filter((website) => website.selected)
       .map((website) => website);
   };
 
   return (
-    <>
-      <main className="search">
-        <img className="searchin-logo" src={searchin} alt="SearchIn" />
-        <span className="searchin-slogan">
-          Buscas nos principais sites do mercado
-        </span>
-        <form className="query" onSubmit={handleSearch}>
-          <input
-            type="text"
-            className="query__input"
-            placeholder="Busque o que quiser, onde quiser"
-            value={searchValue}
-            onChange={handleInputValue}
-          />
-          <button className="query__button"></button>
-        </form>
-        <Preview
-          specificQueries={specificQueries}
-          selectedWebsites={selectedWebsites}
-          isSpecificMultisearch={isSpecificMultisearch}
+    <main className="search">
+      <img className="searchin-logo" src={searchin} alt="SearchIn" />
+      <span className="searchin-slogan">
+        Buscas nos principais sites do mercado
+      </span>
+      <form className="query" onSubmit={handleSearch}>
+        <input
+          type="text"
+          className="query__input"
+          placeholder="Busque o que quiser, onde quiser"
+          value={searchValue}
+          onChange={handleSearchValues}
         />
-      </main>
-    </>
+        <button className="query__button"></button>
+      </form>
+      <Preview
+        advancedQueries={advancedQueries}
+        selectedWebsites={selectedWebsites}
+        isAdvancedSearch={isAdvancedSearch}
+      />
+    </main>
   );
 }

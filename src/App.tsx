@@ -1,5 +1,6 @@
 // TODO: Implementar sistema de buscador default
 // TODO: Implementar sistema de buscadores favoritados
+// TODO: Implementar sistema de dicas através de um modal
 
 import { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
@@ -12,7 +13,6 @@ import "./App.scss";
 
 function App() {
   const [websites, setWebsites] = useState<Website[]>([]);
-  const [searchValue, setSearchValue] = useState<string>("");
   const [sidebarIsVisible, setSidebarIsVisible] = useState<boolean>(true);
   const [sidebarContent, setSidebarContent] = useState<Tabs>("Select");
 
@@ -47,11 +47,7 @@ function App() {
         websites={websites}
         setWebsites={setWebsites}
       />
-      <Search
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        websites={websites}
-      />
+      <Search websites={websites} />
     </>
   );
 }

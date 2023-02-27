@@ -1,29 +1,27 @@
-// TODO: Refatorar o código
-
 import Website from "../../../interfaces/website";
-import "./preview.scss"
+import "./preview.scss";
 
 export default function Preview({
-  specificQueries,
+  advancedQueries,
   selectedWebsites,
-  isSpecificMultisearch,
+  isAdvancedSearch,
 }: {
-  specificQueries: string[];
+  advancedQueries: string[];
   selectedWebsites: Website[];
-  isSpecificMultisearch: () => boolean;
+  isAdvancedSearch: () => boolean;
 }) {
-  const numberSearches = (
+  const numberOpenTabs = (
     index: number,
     queries: string,
     selectedWebsites: Website[]
   ): number => {
-    const numQueries: number = queriesList(queries).length;
+    const numQueries: number = getBasicQueries(queries).length;
     const numWebsites: number = selectedWebsites.length;
-    const isTheLastQuery = index == specificQueries.length - 1;
-    const theresWebsite = !!selectedWebsites[index]
-    const theresMoreWebsites = numWebsites >= index;
-    if (isSpecificMultisearch()) {
-      if (!isTheLastQuery && theresWebsite) return numQueries;
+    const isTheLastQuery: boolean = index == advancedQueries.length - 1;
+    const theresCurrentWebsite: boolean = !!selectedWebsites[index];
+    const theresMoreWebsites: boolean = numWebsites >= index;
+    if (isAdvancedSearch()) {
+      if (!isTheLastQuery && theresCurrentWebsite) return numQueries;
       else if (isTheLastQuery && theresMoreWebsites)
         return numQueries * (numWebsites - index);
       else return 0;
@@ -33,70 +31,65 @@ export default function Preview({
     }
   };
 
-  const queriesList = (queries: string): string[] => {
+  const getBasicQueries = (queries: string): string[] => {
     return queries.split(/(?:\b|\s+)\|(?:\b|\s+)/g);
   };
 
-  const numberSearchesAlert = (num: number): string => {
-    if (num < 10) return "number_occurrences number_occurrences--regular";
-    else if (num >= 10 && num < 20)
-      return "number_occurrences number_occurrences--atention";
-    else if (num >= 20 && num < 30)
-      return "number_occurrences number_occurrences--alert";
-    else return "number_occurrences number_occurrences--danger";
+  const alertTabs = (numTabs: number): string => {
+    const className: string = "number_occurrences number_occurrences";
+    if (numTabs < 8) return className + "--regular";
+    else if (numTabs >= 8 && numTabs < 16) return className + "--atention";
+    else if (numTabs >= 16 && numTabs < 24) return className + "--alert";
+    else return className + "--danger";
   };
 
-  const selectedWebsite = (index: number): string[] => {
-    if (
-      index == specificQueries.length - 1 &&
-      selectedWebsites.length > index
-    ) {
-      const websites: string[] = [];
-      for (let i = index; i < selectedWebsites.length; i++) {
-        websites.push(selectedWebsites[i].name);
-      }
-      return websites;
+  const querieWebsites = (index: number): string[] => {
+    const lastQuery: boolean = index == advancedQueries.length - 1;
+    const moreWebsites: boolean = selectedWebsites.length > index;
+    if (lastQuery && moreWebsites) {
+      const nextWebsites: string[] = [];
+      for (let i = index; i < selectedWebsites.length; i++)
+        nextWebsites.push(selectedWebsites[i].name);
+      return nextWebsites;
     }
-    return selectedWebsites.length <= index
-      ? [""]
-      : [selectedWebsites[index].name];
+    return !moreWebsites ? [""] : [selectedWebsites[index].name];
   };
 
   return (
-    <>
-      {specificQueries.map((querie, index) => {
-          return (
-            <section key={index} className="expected_result">
-              {
-                <code
-                  className={numberSearchesAlert(
-                    numberSearches(index, querie, selectedWebsites)
-                  )}
-                >
-                  {numberSearches(index, querie, selectedWebsites)}
+    <section className="preview">
+      {advancedQueries.map((querie, index) => {
+        return (
+          <article key={index} className="expected_result">
+            {
+              <code
+                className={alertTabs(
+                  numberOpenTabs(index, querie, selectedWebsites)
+                )}
+              >
+                {numberOpenTabs(index, querie, selectedWebsites)}
+              </code>
+            }{" "}
+            Search{" "}
+            {getBasicQueries(querie)[0] &&
+              getBasicQueries(querie).map((query, i) => (
+                <code key={i} className="search_snippet">
+                  "{query}"
                 </code>
-              }{" "}
-              Search{" "}
-              {queriesList(querie)[0] &&
-                queriesList(querie).map((query, i) => (
+              ))}
+            in{" "}
+            {isAdvancedSearch()
+              ? querieWebsites(index)[0] &&
+                querieWebsites(index).map((name) => (
+                  <code className="search_snippet">{name}</code>
+                ))
+              : selectedWebsites.map((website, i) => (
                   <code key={i} className="search_snippet">
-                    "{query}"
+                    {website.name}
                   </code>
                 ))}
-              in{" "}
-              {isSpecificMultisearch()
-                ? selectedWebsite(index)[0] &&
-                  selectedWebsite(index).map((name) => (
-                    <code className="search_snippet">{name}</code>
-                  ))
-                : selectedWebsites.map((website, i) => (
-                    <code key={i} className="search_snippet">
-                      {website.name}
-                    </code>
-                  ))}
-            </section>
-          );
-        })}
-    </>
+          </article>
+        );
+      })}
+    </section>
   );
 }

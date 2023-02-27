@@ -23,8 +23,27 @@ export default function Card({
     );
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLLabelElement>) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
-    <>
+    <label
+      className={
+        website.selected ? "card__label card__label--selected" : "card__label"
+      }
+      htmlFor={website.name}
+      tabIndex={0}
+      style={{
+        backgroundImage: `url('logos/logo-${website.name
+          .replaceAll(" ", "")
+          .toLowerCase()}.png')`,
+      }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
       <input
         type="checkbox"
         name={website.name}
@@ -32,19 +51,6 @@ export default function Card({
         className="card__checkbox"
         value={website.name}
       />
-      <label
-        className={
-          website.selected ? "card__label card__label--selected" : "card__label"
-        }
-        htmlFor={website.name}
-        tabIndex={0}
-        style={{
-          backgroundImage: `url('logos/logo-${website.name
-            .replaceAll(" ", "")
-            .toLowerCase()}.png')`,
-        }}
-        onClick={handleClick}
-      ></label>
-    </>
+    </label>
   );
 }
