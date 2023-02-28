@@ -3,6 +3,8 @@ import { MdSortByAlpha } from "react-icons/md";
 import Card from "./Card";
 import Website from "../../interfaces/website";
 import Tabs from "../../interfaces/tabs";
+import Default from "./Default";
+import Fixed from "./Fixed";
 import "./sidebar.scss";
 
 export default function Sidebar({
@@ -19,6 +21,12 @@ export default function Sidebar({
   const [filter, setFilter] = useState<string>("");
   const [category, setCategory] = useState<string>("geral");
   const [ascendentOrder, setAscendentOrder] = useState<boolean>(true);
+
+  const getFixedWebsites = (): string[] => {
+    const fixed: string = localStorage.getItem("fixed") || "";
+    const fixedList: string[] = fixed ? JSON.parse(fixed) : [];
+    return fixedList;
+  };
 
   const handleFilter = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setFilter(() => event.target.value);
@@ -43,6 +51,30 @@ export default function Sidebar({
       a.name > b.name ? 1 : -1
     );
     return ascendentOrder ? sortedWebsites : sortedWebsites.reverse();
+  };
+
+  const listOfGeneralWebsites = (): Website[] => {
+    return orderWebsites(websites).filter(
+      (website) =>
+        website.name.toLowerCase().includes(filter.toLowerCase()) &&
+        website.categories.indexOf(category) !== -1 &&
+        !website.selected &&
+        !getFixedWebsites().includes(website.name)
+    );
+  };
+
+  const listOfFixedWebsites = (): Website[] => {
+    return orderWebsites(websites).filter(
+      (website) =>
+        website.name.toLowerCase().includes(filter.toLowerCase()) &&
+        website.categories.indexOf(category) !== -1 &&
+        !website.selected &&
+        getFixedWebsites().includes(website.name)
+    );
+  };
+
+  const listOfSelectedWebsites = (): Website[] => {
+    return orderWebsites(websites).filter((website) => website.selected);
   };
 
   return (
@@ -109,51 +141,49 @@ export default function Sidebar({
 
             <div className="card-group">
               <h2 className="card-group__title">Selecionados</h2>
-              {/* <span className="card-group__placeholder" data-selected-placeholder>Não há buscadores selecionados</span> */}
               <div>
-                {orderWebsites(websites)
-                  .filter((website) => website.selected)
-                  .map((website) => (
+                {listOfSelectedWebsites().map((website) => (
+                  <Card
+                    key={website.id}
+                    website={website}
+                    setWebsites={setWebsites}
+                  ></Card>
+                ))}
+              </div>
+            </div>
+
+            {getFixedWebsites().length > 0 && (
+              <div className="card-group">
+                <h2 className="card-group__title">Favorios</h2>
+                <div>
+                  {" "}
+                  {listOfFixedWebsites().map((website) => (
                     <Card
                       key={website.id}
                       website={website}
                       setWebsites={setWebsites}
                     ></Card>
                   ))}
+                </div>
               </div>
-            </div>
-
-            {/* <div className="card-group">
-          <h2 className="card-group__title">Fixados</h2>
-          <span className="card-group__placeholder" data-pinned-placeholder>Não há buscadores fixados</span>
-          <div></div>
-        </div> */}
+            )}
 
             <div className="card-group">
               <h2 className="card-group__title">Todos</h2>
               <div>
-                {orderWebsites(websites)
-                  .filter(
-                    (website) =>
-                      website.name.toLowerCase().includes(filter) &&
-                      website.categories.indexOf(category) !== -1 &&
-                      !website.selected
-                  )
-                  .map((website) => (
-                    <Card
-                      key={website.id}
-                      website={website}
-                      setWebsites={setWebsites}
-                    ></Card>
-                  ))}
+                {listOfGeneralWebsites().map((website) => (
+                  <Card
+                    key={website.id}
+                    website={website}
+                    setWebsites={setWebsites}
+                  ></Card>
+                ))}
               </div>
             </div>
           </div>
         )}
-        {sidebarContent === "Default" && (
-          <div className="default_tab">Default</div>
-        )}
-        {sidebarContent === "Fixed" && <div className="fixed_tab">Fixed</div>}
+        {sidebarContent === "Default" && <Default />}
+        {sidebarContent === "Fixed" && <Fixed />}
       </aside>
     </>
   );

@@ -1,0 +1,62 @@
+@import "../../../styles/presets.scss";
+
+.input {
+  background-color: darken($navigation-bg, 10%);
+  box-sizing: border-box;
+  border: none;
+  cursor: text;
+  color: $logo-dark;
+  display: block;
+  font-family: inherit;
+  outline: none;
+  padding: 1.3rem 3rem 1.3rem 1rem;
+  width: 100%;
+
+  @include xlg-mob {
+    background-color: $navigation-bg;
+    color: $logo-dark;
+  }
+
+  &::selection {
+    background-color: $logo-dark;
+    color: white;
+  }
+}
+
+.default__item {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  color: $logo-dark;
+  margin: 0;
+  border-top: 1px solid $navigation-bg;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.radio__invisible {
+  visibility: hidden;
+}
+
+.default__list {
+  list-style: none;
+  padding: 0;
+}
+
+.clear_default {
+  width: 100%;
+  background-color: lighten($logo-dark, 5);
+  color: $white;
+  border: none;
+  height: 2.5rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}

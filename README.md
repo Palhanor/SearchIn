@@ -4,11 +4,14 @@
 
 - Aplicar responsividade (mobile)
 - Criar as interfaces dos componentes
+- Usar Redux para gestão global de estados
+- Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
 - Fazer correções de performance para React
+- Passar a estilização para Styled Components
 - Usar tooltip para as ferramentas de navegação
 - Ajeitar as gambiarras da função getSelectedWebsites
+- Rodar testes automatizados para evitar quebras no sistemas
 - Editar os valores da busca através da previsualização (editar ou excluir)
-- Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
 
 ### Modos de busca
 
@@ -24,6 +27,13 @@
 - [ ] Default
 - [ ] Favoritos
 - [ ] Dicas
+- Permissão para abrir pop ups
+- Limpar o localStorage se bugar
+- Metodo de busca |
+- Metodo de busca ^
+- Buscador default
+- Buscadores favoritos
+- Criador do Searchin
 
 **Depois**
 

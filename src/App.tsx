@@ -1,5 +1,4 @@
-// TODO: Implementar sistema de buscador default
-// TODO: Implementar sistema de buscadores favoritados
+// TODO: Adicionar um selecao automatica para quando um buscador for defifino como default
 // TODO: Implementar sistema de dicas através de um modal
 
 import { useEffect, useState } from "react";
@@ -29,6 +28,8 @@ function App() {
           website.categories,
           website.concat
         );
+        if (website.name === localStorage.getItem("default") || "")
+          newWebsite.selected = true;
         return newWebsite;
       })
     );
