@@ -79,8 +79,10 @@ export default function Preview({
             in{" "}
             {isAdvancedSearch()
               ? querieWebsites(index)[0] &&
-                querieWebsites(index).map((name) => (
-                  <code className="search_snippet">{name}</code>
+                querieWebsites(index).map((name, i) => (
+                  <code key={i} className="search_snippet">
+                    {name}
+                  </code>
                 ))
               : selectedWebsites.map((website, i) => (
                   <code key={i} className="search_snippet">

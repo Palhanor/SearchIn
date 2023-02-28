@@ -6,9 +6,9 @@
 - Criar as interfaces dos componentes
 - Fazer correções de performance para React
 - Usar tooltip para as ferramentas de navegação
+- Ajeitar as gambiarras da função getSelectedWebsites
 - Editar os valores da busca através da previsualização (editar ou excluir)
 - Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
-- Manter os selecionados na ordem de seleção (modificar o getSelectedWebsites o componente Search)
 
 ### Modos de busca
 

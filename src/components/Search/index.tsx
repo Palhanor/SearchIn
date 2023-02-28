@@ -82,9 +82,38 @@ export default function Search({ websites }: { websites: Website[] }) {
   };
 
   const getSelectedWebsites = (websites: Website[]): Website[] => {
-    return websites
-      .filter((website) => website.selected)
-      .map((website) => website);
+    const currentSelected: Website[] = websites.filter(
+      (website) => website.selected
+    );
+    const currentWebsitesIds: number[] = currentSelected.map(
+      (website) => website.id
+    );
+    const previousWebsitesIds: number[] = selectedWebsites.map(
+      (website) => website.id
+    );
+
+    const addedWebsite: boolean =
+      currentSelected.length > selectedWebsites.length;
+    const removedWebsite: boolean =
+      currentSelected.length < selectedWebsites.length;
+    if (addedWebsite) {
+      let newWebsiteId: number = currentWebsitesIds.filter(
+        (currentId) => !previousWebsitesIds.includes(currentId)
+      )[0];
+      const newWebsite: Website | undefined = currentSelected.find(
+        (website) => website.id == newWebsiteId
+      );
+      if (newWebsite) return [...selectedWebsites, newWebsite];
+    } else if (removedWebsite) {
+      let oldWebsiteId: number = previousWebsitesIds.filter(
+        (currentId) => !currentWebsitesIds.includes(currentId)
+      )[0];
+      const newWebsiteList: Website[] = selectedWebsites.filter(
+        (website) => website.id !== oldWebsiteId
+      );
+      return newWebsiteList;
+    }
+    return selectedWebsites;
   };
 
   return (
