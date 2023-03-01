@@ -1,5 +1,4 @@
-// TODO: Adicionar um selecao automatica para quando um buscador for defifino como default
-// TODO: Implementar sistema de dicas através de um modal
+// TODO: Desenvolver as telas de Default e Fixed no Modal
 
 import { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
@@ -7,13 +6,17 @@ import Sidebar from "./components/Sidebar";
 import Search from "./components/Search";
 import api from "./service/mockAPI.json";
 import Website from "./interfaces/website";
-import Tabs from "./interfaces/tabs";
+import sidebarTabs from "./interfaces/sidebarTabs";
+import Modal from "./components/Modal";
+import modalTabs from "./interfaces/modalTabs";
 import "./App.scss";
 
 function App() {
   const [websites, setWebsites] = useState<Website[]>([]);
   const [sidebarIsVisible, setSidebarIsVisible] = useState<boolean>(true);
-  const [sidebarContent, setSidebarContent] = useState<Tabs>("Select");
+  const [sidebarContent, setSidebarContent] = useState<sidebarTabs>("Select");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [modalWindow, setModalWindow] = useState<modalTabs>("Generics");
 
   useEffect(() => {
     const data = api.websites;
@@ -46,9 +49,12 @@ function App() {
         sidebarIsVisible={sidebarIsVisible}
         sidebarContent={sidebarContent}
         websites={websites}
+        setIsOpen={setIsOpen}
         setWebsites={setWebsites}
+        setModalWindow={setModalWindow}
       />
       <Search websites={websites} />
+      {isOpen && <Modal setIsOpen={setIsOpen} modalWindow={modalWindow} />}
     </>
   );
 }

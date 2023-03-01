@@ -29,13 +29,18 @@
   background-color: white;
   color: $logo-dark;
   margin: 0;
-  border-top: 1px solid $navigation-bg;
+  border: 1px solid $navigation-bg;
+  border-bottom: none;
   height: 2.5rem;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem 0 1rem;
   box-sizing: border-box;
   cursor: pointer;
+
+  &:last-child {
+    border-bottom: 1px solid $navigation-bg;
+  }
 }
 
 .radio__invisible {

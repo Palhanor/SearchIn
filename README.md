@@ -4,6 +4,7 @@
 
 - Aplicar responsividade (mobile)
 - Criar as interfaces dos componentes
+- Fazer o modal de dicas ficar responsivo
 - Usar Redux para gestão global de estados
 - Permitir o ajuste de largura da [Sidebar](https://codepen.io/maqic/pen/XdgJKY)
 - Fazer correções de performance para React
@@ -12,6 +13,7 @@
 - Ajeitar as gambiarras da função getSelectedWebsites
 - Rodar testes automatizados para evitar quebras no sistemas
 - Editar os valores da busca através da previsualização (editar ou excluir)
+- Adicionar um selecao automatica para quando um buscador for defifino como default
 
 ### Modos de busca
 
@@ -24,16 +26,9 @@
 **Imediato**
 
 - [x] Buscadores
-- [ ] Default
-- [ ] Favoritos
+- [x] Default
+- [x] Favoritos
 - [ ] Dicas
-- Permissão para abrir pop ups
-- Limpar o localStorage se bugar
-- Metodo de busca |
-- Metodo de busca ^
-- Buscador default
-- Buscadores favoritos
-- Criador do Searchin
 
 **Depois**
 

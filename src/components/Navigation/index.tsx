@@ -4,7 +4,7 @@ import {
   BsLightbulbFill,
 } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
-import Tabs from "../../interfaces/tabs";
+import sidebarTabs from "../../interfaces/sidebarTabs";
 import "./navigation.scss";
 
 export default function Navigation({
@@ -12,49 +12,41 @@ export default function Navigation({
   setSidebarIsVisible,
   setSidebarContent,
 }: {
-  sidebarContent: Tabs;
+  sidebarContent: sidebarTabs;
   setSidebarIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  setSidebarContent: React.Dispatch<React.SetStateAction<Tabs>>;
+  setSidebarContent: React.Dispatch<React.SetStateAction<sidebarTabs>>;
 }) {
-  const handleSearchEngines = (): void => {
-    if (sidebarContent != "Select") {
-      setSidebarContent(() => "Select");
+  const handleTabChanges = (tabName: sidebarTabs): void => {
+    if (sidebarContent != tabName) {
+      setSidebarContent(() => tabName);
       setSidebarIsVisible(() => true);
     } else setSidebarIsVisible((state) => !state);
-  };
-
-  const handleDefaultSearchEngine = (): void => {
-    if (sidebarContent != "Default") {
-      setSidebarContent(() => "Default");
-      setSidebarIsVisible(() => true);
-    } else setSidebarIsVisible((state) => !state);
-  };
-
-  const handleFixedSearchEngines = (): void => {
-    if (sidebarContent != "Fixed") {
-      setSidebarContent(() => "Fixed");
-      setSidebarIsVisible(() => true);
-    } else setSidebarIsVisible((state) => !state);
-  };
-
-  const handleSearchinTips = (): void => {
-    console.log(
-      "Deve abrir um modal exibindo dicas de como navegar e realizar buscas na plataforma"
-    );
   };
 
   return (
     <nav className="navigation">
-      <div className="navigation_element" onClick={handleSearchEngines}>
+      <div
+        className="navigation_element"
+        onClick={() => handleTabChanges("Select")}
+      >
         <FaSearch size={25} color="#365461"></FaSearch>
       </div>
-      <div className="navigation_element" onClick={handleDefaultSearchEngine}>
+      <div
+        className="navigation_element"
+        onClick={() => handleTabChanges("Default")}
+      >
         <BsFillPinAngleFill size={25} color="#365461"></BsFillPinAngleFill>
       </div>
-      <div className="navigation_element" onClick={handleFixedSearchEngines}>
+      <div
+        className="navigation_element"
+        onClick={() => handleTabChanges("Fixed")}
+      >
         <BsStarFill size={25} color="#365461"></BsStarFill>
       </div>
-      <div className="navigation_element" onClick={handleSearchinTips}>
+      <div
+        className="navigation_element"
+        onClick={() => handleTabChanges("Tips")}
+      >
         <BsLightbulbFill size={25} color="#365461"></BsLightbulbFill>
       </div>
     </nav>
