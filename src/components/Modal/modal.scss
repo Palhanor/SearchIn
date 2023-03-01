@@ -43,3 +43,14 @@
         margin: .8rem auto;
     }
 }
+
+.clear__storage {
+    border: none;
+    padding: 1rem 1.5rem;
+    background-color: $logo-dark;
+    color: $white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: .4rem;
+}

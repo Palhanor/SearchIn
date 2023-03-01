@@ -32,7 +32,7 @@ export function Generics() {
         neste nosso caso, serão 4.
       </p>
       <img
-        src="../../../../public/exemplos/generica.png"
+        src="./exemplos/generica.png"
         alt="Exemplo da busca multipla genérica"
       />
       <h2>Permissão do navegador</h2>
@@ -45,7 +45,7 @@ export function Generics() {
         Google Chrome:
       </p>
       <img
-        src="../../../../public/exemplos/permissao.png"
+        src="./exemplos/permissao.png"
         alt="Conceder permissão para o Searchin"
       />
     </>
@@ -80,7 +80,7 @@ export function Advanced() {
         7" no AliExpress e por fim, por "JoJo" na Crunchyroll:
       </p>
       <img
-        src="../../../../public/exemplos/especifica.png"
+        src="./exemplos/especifica.png"
         alt="Exemplo da busca multipla específica"
       />
       <h2>Buscas combinadas</h2>
@@ -94,7 +94,7 @@ export function Advanced() {
         ver tal comportamento no exemplo a seguir:
       </p>
       <img
-        src="../../../../public/exemplos/combinada.png"
+        src="./exemplos/combinada.png"
         alt="Exemplo da busca multipla combinada"
       />
       <h2>Casos excepcionais</h2>
@@ -106,7 +106,7 @@ export function Advanced() {
         à qualquer buscador.
       </p>
       <img
-        src="../../../../public/exemplos/caso1.png"
+        src="./exemplos/caso1.png"
         alt="Caso onde há mais sub-buscas que buscadores"
       />
       <h3>Mais buscadores que buscas</h3>
@@ -117,7 +117,7 @@ export function Advanced() {
         caso são Amazon, Buscapé e AliExpress.
       </p>
       <img
-        src="../../../../public/exemplos/caso2.png"
+        src="./exemplos/caso2.png"
         alt="Caso onde há mais buscadores que sub-buscas"
       />
       <h2>Permissão do navegador</h2>
@@ -130,7 +130,7 @@ export function Advanced() {
         Google Chrome:
       </p>
       <img
-        src="../../../../public/exemplos/permissao.png"
+        src="./exemplos/permissao.png"
         alt="Conceder permissão para o Searchin"
       />
     </>
@@ -138,21 +138,124 @@ export function Advanced() {
 }
 
 export function Default() {
+  const clearLocalStorage = () => {
+    localStorage.clear();
+  };
+
   return (
     <>
       <h1>Configurar buscador padrão</h1>
       <h2>Explicação</h2>
-      <span>Limpar o localStorage se bugar</span>
+      <p>
+        A definição de um buscador padrão garante que ao acessar o Searchin, o
+        buscador padrão já estará selecionado, não sendo necessário realizar sua
+        seleção manualmente. Igualmente, caso seja realizado um recarregamento
+        da página, este buscador já estará prontamente selecionado ao fim do
+        carregamento.
+      </p>
+      <p>
+        É importante lembrar que só pode ser definido um único buscador padrão,
+        de tal forma que ao selecionar um outro buscador o anterior será
+        substituido pelo novo.
+      </p>
+      <img
+        src="./exemplos/padrao_botao.png"
+        alt="Conceder permissão para o Searchin"
+      />
+      <h2>Exemplo</h2>
+      <p>
+        Aqui temos o buscador Google definido como o padrão, o que significa que
+        sempre ao carregar a pagina o Google já estará selecionado para ser
+        utilizado em pesquisas.
+      </p>
+      <img
+        src="./exemplos/padrao.png"
+        alt="Conceder permissão para o Searchin"
+      />
+      <h2>Limpar</h2>
+      <p>
+        É importante destacar que, caso haja a necessidade de remover buscadores
+        padrão, basta clicar no botão "Limpar" logo abaixo do input de filtro.
+      </p>
+      <img
+        src="./exemplos/limpar.png"
+        alt="Conceder permissão para o Searchin"
+      />
+      <h2>Problemas com buscador padrão</h2>
+      <p>
+        Atualmente, o Searchin realiza o armazenamento do buscador padrão dentro
+        do próprio navegador atraves do localStorage, como forma de evitar a
+        necessidade de um banco de dados e realização de cadastro e logins de
+        usuários.
+      </p>
+      <p>
+        Desta forma, podem ocorrer inconssistências, por exemplo caso o
+        localStorage seja corrompido ou caso alguma atualização quebre com o
+        formato de armazenamento adotado anteriormente. Desta forma, caso seja
+        identificados problemas na manipulação do buscado padrão, realize uma
+        limpeza do armazenamento local clicando no botão abaixo.
+      </p>
+      <button className="clear__storage" onClick={clearLocalStorage}>
+        Limpar dados salvos
+      </button>
     </>
   );
 }
 
 export function Fixed() {
+  const clearLocalStorage = () => {
+    localStorage.clear();
+  };
+
   return (
     <>
       <h1>Configurar buscadores favoritos</h1>
       <h2>Explicação</h2>
-      <span>Limpar o localStorage se bugar</span>
+      <p>
+        A configuração de buscadores favoritos tem como função separar um grupos
+        de buscadores mais relevantes entre aqueles atualmente suportados pelo
+        Searchin. Dado que atualmente suportamos aproximadamente 100 sistemas de
+        busca, e pretendemos expandir o suporte para ainda mais websites, é
+        importante conseguir definir aqueles que tem uma posição privilegiada
+        dado as suas necessidades de uso.
+      </p>
+      <p>
+        Desta forma, ao definir um ou mais buscadores como favoritos, estes irão
+        para um agrupamento intermediário, entre os Selecionados e Todos,
+        chamado de Favoritos.
+      </p>
+      <img
+        src="./exemplos/favoritos_botao.png"
+        alt="Conceder permissão para o Searchin"
+      />
+      <h2>Exemplo</h2>
+      <p>
+        Aqui temos os mecanismos do Google, YouTube, Wikipedia e Reddit
+        selecionados como favoritos, o que irá fazer com que estes sejam
+        colocados loco acima de todos os demais mecanismos disponíveis no
+        Searchin.
+      </p>
+      <img
+        src="./exemplos/favoritos.png"
+        alt="Conceder permissão para o Searchin"
+      />
+      <h2>Problemas com buscador padrão</h2>
+      <p>
+        Atualmente, o Searchin realiza o armazenamento dos buscadores
+        favoritados dentro do próprio navegador atraves do localStorage, como
+        forma de evitar a necessidade de um banco de dados e realização de
+        cadastro e logins de usuários.
+      </p>
+      <p>
+        Desta forma, podem ocorrer inconssistências, por exemplo caso o
+        localStorage seja corrompido ou caso alguma atualização quebre com o
+        formato de armazenamento adotado anteriormente. Desta forma, caso seja
+        identificados problemas na manipulação dos buscadores favoritos, realize
+        uma limpeza do armazenamento local clicando no botão abaixo.
+      </p>
+      <button className="clear__storage" onClick={clearLocalStorage}>
+        Limpar dados salvos
+      </button>
     </>
   );
 }
