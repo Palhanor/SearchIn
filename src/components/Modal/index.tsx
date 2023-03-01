@@ -1,7 +1,7 @@
 import modalTabs from "../../interfaces/modalTabs";
 import "./modal.scss";
 import { Advanced, Generics, Default, Fixed } from "./Sreens";
-import { RiCloseCircleLine } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
 
 export default function Modal({
   modalWindow,
@@ -17,7 +17,7 @@ export default function Modal({
   return (
     <div className="background_modal">
       <div className="close_modal" onClick={handleClaseModal}>
-        <RiCloseCircleLine size={50} color="#FFF" />
+        <RiCloseFill size={50} color="#FFF" />
       </div>
       <div className="modal_container">
         {modalWindow == "Generics" && <Generics />}
