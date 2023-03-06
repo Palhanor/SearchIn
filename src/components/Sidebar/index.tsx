@@ -159,8 +159,8 @@ export default function Sidebar({
             </div>
 
             {getFixedWebsites().length > 0 && (
-              <div className="card-group">
-                <h2 className="card-group__title">Favorios</h2>
+              <details open={true} className="card-group">
+                <summary className="card-group__title">Favorios</summary>
                 <div>
                   {" "}
                   {listOfFixedWebsites().map((website) => (
@@ -171,11 +171,11 @@ export default function Sidebar({
                     ></Card>
                   ))}
                 </div>
-              </div>
+              </details>
             )}
 
-            <div className="card-group">
-              <h2 className="card-group__title">Todos</h2>
+            <details open={true} className="card-group">
+              <summary className="card-group__title">Todos</summary>
               <div>
                 {listOfGeneralWebsites().map((website) => (
                   <Card
@@ -185,7 +185,7 @@ export default function Sidebar({
                   ></Card>
                 ))}
               </div>
-            </div>
+            </details>
           </div>
         )}
         {sidebarContent === "Default" && <Default />}

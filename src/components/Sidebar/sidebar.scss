@@ -2,31 +2,31 @@
 
 .sidebar {
   box-sizing: border-box;
-  background-color: $navigation-bg;
-  height: 100vh;
-  margin-left: -75vw;
+  background-color: $sidebar-bg;
+  height: 90vh;
+  margin-left: -100vw;
   overflow-y: scroll;
   padding-bottom: 2rem;
   position: fixed;
   padding: 1rem;
   scrollbar-width: thin;
   scrollbar-color: rgba($logo-light, 0.3) rgba($logo-light, 0.15);
-  transition: 0.5s ease-in-out;
-  width: 75vw;
+  width: 100vw;
   z-index: 1;
-
+  
   @include md-mob {
+    transition: 0.5s ease-in-out;
     margin-left: -60vw;
     width: 60vw;
   }
-
+  
   @include lg-mob {
     margin-left: -50vw;
     width: 50vw;
   }
-
+  
   @include xlg-mob {
-    background-color: $sidebar-bg;
+    height: 100vh;
     margin-left: 0;
     position: static;
     scrollbar-color: rgba($logo-light, 0.6) rgba($logo-light, 0.15);
@@ -111,6 +111,7 @@
 
   .card-group {
     margin-bottom: 2rem;
+    cursor: pointer;
 
     &__title {
       color: $medium-gray;

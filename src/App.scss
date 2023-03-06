@@ -23,7 +23,7 @@
 }
 
 .close-sidebar {
-  margin-left: -75vw;
+  margin-left: -100vw;
 
   @include md-mob {
     margin-left: -60vw;
@@ -44,4 +44,16 @@
 
 .open-sidebar {
   margin-left: 0;
+
+  @include xlg-mob {
+    margin-left: 6vw;
+  }
+
+  @include sm-desk {
+    margin-left: 5vw;
+  }
+
+  @include md-desk {
+    margin-left: 4vw;
+  }
 }

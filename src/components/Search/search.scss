@@ -2,6 +2,11 @@
 
 .search {
   width: 100%;
+  height: 90vh;
+
+  @include xlg-mob {
+    height: 100vh;
+  }
 
   .searchin-logo {
     clear: both;
