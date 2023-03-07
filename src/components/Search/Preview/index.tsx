@@ -1,3 +1,4 @@
+import { PreviewProps } from "../../../interfaces/props";
 import Website from "../../../interfaces/website";
 import "./preview.scss";
 
@@ -5,11 +6,7 @@ export default function Preview({
   advancedQueries,
   selectedWebsites,
   isAdvancedSearch,
-}: {
-  advancedQueries: string[];
-  selectedWebsites: Website[];
-  isAdvancedSearch: () => boolean;
-}) {
+}: PreviewProps) {
   const numberOpenTabs = (
     index: number,
     queries: string,

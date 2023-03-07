@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { MdSortByAlpha } from "react-icons/md";
 import Card from "./Card";
 import Website from "../../interfaces/website";
-import sidebarTabs from "../../interfaces/sidebarTabs";
 import Default from "./Default";
 import Fixed from "./Fixed";
 import Tips from "./Tips";
-import modalTabs from "../../interfaces/modalTabs";
+import { SidebarProps } from "../../interfaces/props";
+import { MdSortByAlpha } from "react-icons/md";
 import "./sidebar.scss";
 
 export default function Sidebar({
@@ -16,14 +15,7 @@ export default function Sidebar({
   setIsOpen,
   setWebsites,
   setModalWindow,
-}: {
-  sidebarIsVisible: boolean;
-  sidebarContent: sidebarTabs;
-  websites: Website[];
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setWebsites: React.Dispatch<React.SetStateAction<Website[]>>;
-  setModalWindow: React.Dispatch<React.SetStateAction<modalTabs>>;
-}) {
+}: SidebarProps) {
   const [filter, setFilter] = useState<string>("");
   const [category, setCategory] = useState<string>("geral");
   const [ascendentOrder, setAscendentOrder] = useState<boolean>(true);

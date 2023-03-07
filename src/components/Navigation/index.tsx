@@ -1,22 +1,19 @@
+import { NavigationProps } from "../../interfaces/props";
+import { SidebarTab } from "../../interfaces/tabs";
+import { FaSearch } from "react-icons/fa";
 import {
   BsFillPinAngleFill,
   BsStarFill,
   BsLightbulbFill,
 } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
-import sidebarTabs from "../../interfaces/sidebarTabs";
 import "./navigation.scss";
 
 export default function Navigation({
   sidebarContent,
   setSidebarIsVisible,
   setSidebarContent,
-}: {
-  sidebarContent: sidebarTabs;
-  setSidebarIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  setSidebarContent: React.Dispatch<React.SetStateAction<sidebarTabs>>;
-}) {
-  const handleTabChanges = (tabName: sidebarTabs): void => {
+}: NavigationProps) {
+  const handleTabChanges = (tabName: SidebarTab): void => {
     if (sidebarContent != tabName) {
       setSidebarContent(() => tabName);
       setSidebarIsVisible(() => true);

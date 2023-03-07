@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Preview from "./Preview";
 import Website from "../../interfaces/website";
 import searchin from "../../assets/icons/searchin_logo.svg";
+import { SearchProps } from "../../interfaces/props";
 import "./search.scss";
 
-export default function Search({ websites }: { websites: Website[] }) {
+export default function Search({ websites }: SearchProps) {
   const [searchValue, setSearchValue] = useState<string>("");
   const [advancedQueries, setAdvancedQueries] = useState<string[]>([""]);
   const [selectedWebsites, setSelectedWebsites] = useState<Website[]>([]);

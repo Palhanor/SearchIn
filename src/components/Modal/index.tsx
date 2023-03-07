@@ -1,15 +1,9 @@
-import modalTabs from "../../interfaces/modalTabs";
 import "./modal.scss";
 import { Advanced, Generics, Default, Fixed } from "./Sreens";
 import { RiCloseFill } from "react-icons/ri";
+import { ModalProps } from "../../interfaces/props";
 
-export default function Modal({
-  modalWindow,
-  setIsOpen,
-}: {
-  modalWindow: modalTabs;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+export default function Modal({ modalWindow, setIsOpen }: ModalProps) {
   const handleClaseModal = () => {
     setIsOpen(() => false);
   };

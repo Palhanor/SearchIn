@@ -1,13 +1,8 @@
+import { CardProps } from "../../../interfaces/props";
 import Website from "../../../interfaces/website";
 import "./card.scss";
 
-export default function Card({
-  website,
-  setWebsites,
-}: {
-  website: Website;
-  setWebsites: React.Dispatch<React.SetStateAction<Website[]>>;
-}) {
+export default function Card({ website, setWebsites }: CardProps) {
   const handleClick = (): void => {
     const newWebsiteState: Website = {
       ...website,

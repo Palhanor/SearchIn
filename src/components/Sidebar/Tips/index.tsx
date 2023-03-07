@@ -1,15 +1,9 @@
-import { useState } from "react";
-import modalTabs from "../../../interfaces/modalTabs";
+import { TipsProps } from "../../../interfaces/props";
+import { ModalTab } from "../../../interfaces/tabs";
 import "./tips.scss";
 
-export default function Tips({
-  setIsOpen,
-  setModalWindow,
-}: {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setModalWindow: React.Dispatch<React.SetStateAction<modalTabs>>;
-}) {
-  const handleOpenModal = (modalTab: modalTabs): void => {
+export default function Tips({ setIsOpen, setModalWindow }: TipsProps) {
+  const handleOpenModal = (modalTab: ModalTab): void => {
     setIsOpen(() => true);
     setModalWindow(() => modalTab);
   };
