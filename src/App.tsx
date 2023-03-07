@@ -1,22 +1,19 @@
-// TODO: Desenvolver as telas de Default e Fixed no Modal
-
 import { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import Sidebar from "./components/Sidebar";
 import Search from "./components/Search";
 import api from "./service/mockAPI.json";
 import Website from "./interfaces/website";
-import sidebarTabs from "./interfaces/sidebarTabs";
 import Modal from "./components/Modal";
-import modalTabs from "./interfaces/modalTabs";
 import "./App.scss";
+import { ModalTab, SidebarTab } from "./interfaces/tabs";
 
 function App() {
   const [websites, setWebsites] = useState<Website[]>([]);
   const [sidebarIsVisible, setSidebarIsVisible] = useState<boolean>(true);
-  const [sidebarContent, setSidebarContent] = useState<sidebarTabs>("Select");
+  const [sidebarContent, setSidebarContent] = useState<SidebarTab>("Select");
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [modalWindow, setModalWindow] = useState<modalTabs>("Generics");
+  const [modalWindow, setModalWindow] = useState<ModalTab>("Generics");
 
   useEffect(() => {
     const data = api.websites;
