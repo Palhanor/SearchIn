@@ -17,7 +17,7 @@ export default function Sidebar({
   setModalWindow,
 }: SidebarProps) {
   const [filter, setFilter] = useState<string>("");
-  const [category, setCategory] = useState<string>("geral");
+  const [category, setCategory] = useState<string>("");
   const [ascendentOrder, setAscendentOrder] = useState<boolean>(true);
 
   const getFixedWebsites = (): string[] => {
@@ -55,7 +55,7 @@ export default function Sidebar({
     return orderWebsites(websites).filter(
       (website) =>
         website.name.toLowerCase().includes(filter.toLowerCase()) &&
-        website.categories.indexOf(category) !== -1 &&
+        (website.categories.includes(category) || category == "") &&
         !website.selected &&
         !getFixedWebsites().includes(website.name)
     );
@@ -65,7 +65,7 @@ export default function Sidebar({
     return orderWebsites(websites).filter(
       (website) =>
         website.name.toLowerCase().includes(filter.toLowerCase()) &&
-        website.categories.indexOf(category) !== -1 &&
+        (website.categories.includes(category) || category == "") &&
         !website.selected &&
         getFixedWebsites().includes(website.name)
     );
@@ -107,7 +107,7 @@ export default function Sidebar({
                 defaultValue={"geral"}
                 onChange={handleCategories}
               >
-                <option value="geral">Geral</option>
+                <option value="">Geral</option>
                 <option value="buscadores">Buscadores</option>
                 <option value="videos-filmes">Vídeos e filmes</option>
                 <option value="compra-venda">Compra e venda</option>

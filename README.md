@@ -39,12 +39,6 @@ O projeto se trata de uma Start Page com pretensão de vir a ser um buscador per
 
 **Sidebar**: Se trata do sistema de gestão de seleção de websites, configuração de buscadores default e favoritos, além das dicas de utilização do sistema. Cada uma destas ferramentas é configurada dentro de seu próprio componente, como nos casos do _Default_, _Fixed_ e _Tips_. E exceção é a ferramenta inicial de seleçõ que websites, que está embutida na própria sidebar, e apenas os card de cada site são componentes próprios dentro do diretório _Card_.
 
-<!--
-Sidebar > Websites
-Sidebar > Websites > Card
-Search > Preview > SearchResult
--->
-
 ---
 
 ## Modos de busca
@@ -59,9 +53,10 @@ Search > Preview > SearchResult
 
 - [x] Dar suporte para o mobile através de um design responsivo
 - [x] Criar as interfaces usadas pelos componentes da aplicação
-- [ ] Fazer uma limpeza nos dados retornados pelo mockAPI.json
+- [x] Fazer uma limpeza nos dados retornados pelo mockAPI.json
 - [ ] Verificar buscas que estão quebrando e realizar as correções
 - [ ] Realizar melhorias de SEO, acessibilidade e performance
+- [ ] Componentizar a visualização dos websites suportados na sidebar inicial
 - [ ] Implementar o sistema de buscas através de shortcuts
 - [ ] Permitir o reajuste de largura da sidebar
 - [ ] Passar a estilização para a biblioteca Styled Components

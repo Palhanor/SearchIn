@@ -39,11 +39,11 @@ export default function Search({ websites }: SearchProps) {
       const theresMoreWebsites: boolean = selectedWebsites.length > i;
       basicQueries.forEach((query) => {
         if (website) {
-          openWebsite(website.search, query, website.lastValue);
+          openWebsite(website.search[0], query, website.search[1]);
           if (isLastQuerie && theresMoreWebsites) {
             for (let j = i + 1; j < selectedWebsites.length; j++) {
               const nextWebsites = selectedWebsites[j];
-              openWebsite(nextWebsites.search, query, nextWebsites.lastValue);
+              openWebsite(nextWebsites.search[0], query, nextWebsites.search[1]);
             }
           }
         }
@@ -59,7 +59,7 @@ export default function Search({ websites }: SearchProps) {
         window.open(`${website.url}`, "_blank");
       } else {
         basicQueries.forEach((query) =>
-          openWebsite(website.search, query, website.lastValue)
+          openWebsite(website.search[0], query, website.search[1])
         );
       }
     });

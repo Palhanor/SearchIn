@@ -12,8 +12,8 @@ function App() {
   const [websites, setWebsites] = useState<Website[]>([]);
   const [sidebarIsVisible, setSidebarIsVisible] = useState<boolean>(true);
   const [sidebarContent, setSidebarContent] = useState<SidebarTab>("Select");
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [modalWindow, setModalWindow] = useState<ModalTab>("Generics");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const data = api.websites;
@@ -24,9 +24,7 @@ function App() {
           website.name,
           website.url,
           website.search,
-          website.lastValue,
-          website.categories,
-          website.concat
+          website.categories
         );
         if (website.name === localStorage.getItem("default") || "")
           newWebsite.selected = true;
